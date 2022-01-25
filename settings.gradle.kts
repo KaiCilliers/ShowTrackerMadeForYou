@@ -13,4 +13,4 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "ShowTracker - Made for You"
-include ':app'
+include(":app")
