@@ -1,6 +1,5 @@
-import java.util.Properties
-import java.io.FileInputStream
 import kotlin.collections.*
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     id ("com.android.application")
@@ -49,6 +48,7 @@ android {
 
     kotlinOptions {
         jvmTarget = "1.8"
+        allWarningsAsErrors = true
     }
 
     /**
@@ -64,6 +64,7 @@ android {
             applicationIdSuffix = ".standard"
             versionNameSuffix = "-standard"
 
+            @kotlin.Suppress("DEPRECATION")
             setManifestPlaceholders(
                 mapOf(
                     "appIcon" to "",
@@ -76,6 +77,7 @@ android {
             applicationIdSuffix = ".balanco"
             versionNameSuffix = "-balanco"
 
+            @kotlin.Suppress("DEPRECATION")
             setManifestPlaceholders(
                 mapOf(
                     "appIcon" to "",
