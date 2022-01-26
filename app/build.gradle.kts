@@ -17,6 +17,8 @@ android {
         versionCode = Configs.versionCode
         versionName = Configs.versionName
 
+        missingDimensionStrategy("persons", "standard")
+
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
         buildConfigField("String", KeyHelper.TMDB_API_KEY, KeyHelper.getValue(KeyHelper.TMDB_API_KEY))
@@ -33,6 +35,10 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            applicationIdSuffix = ".release"
+        }
+        getByName("debug") {
+            applicationIdSuffix = ".debug"
         }
     }
 
@@ -45,9 +51,15 @@ android {
         jvmTarget = "1.8"
     }
 
+    /**
+     * The idea is to use the persons flavor to provide custom versions of the
+     * application for family members for testing new features
+     */
     setFlavorDimensions(listOf("persons"))
     productFlavors {
+        // region persons
         create("standard") {
+            isDefault = true
             dimension = "persons"
             applicationIdSuffix = ".standard"
             versionNameSuffix = "-standard"
@@ -71,6 +83,7 @@ android {
                 )
             )
         }
+        // endregion
     }
 }
 
