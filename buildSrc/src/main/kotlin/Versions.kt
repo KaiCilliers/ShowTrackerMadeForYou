@@ -14,4 +14,5 @@ object Versions {
     const val espressoCoreVersion = "3.4.0"
 
     const val timberVersion = "5.0.1"
+    const val lifecycleVersion = "2.2.0"
 }

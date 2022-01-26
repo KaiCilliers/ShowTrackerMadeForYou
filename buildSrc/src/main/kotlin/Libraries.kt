@@ -14,4 +14,10 @@ object Libraries {
     const val espressoCore = "androidx.test.espresso:espresso-core:${Versions.espressoCoreVersion}"
 
     const val timber = "com.jakewharton.timber:timber:${Versions.timberVersion}"
+
+    // Lifecycle
+    const val lifecycleRuntime = "androidx.lifecycle:lifecycle-runtime:2.2.0"
+    const val lifecycleCommon = "androidx.lifecycle:lifecycle-common-java8:2.2.0"
+    const val lifecycleViewModel = "androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0"
+    const val lifecycleLiveData = "androidx.lifecycle:lifecycle-livedata-ktx:2.2.0"
 }

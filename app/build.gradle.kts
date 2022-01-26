@@ -102,6 +102,7 @@ dependencies {
 
     // Modules
     implementation(project(Modules.logging))
+    implementation(project(Modules.uiComponents))
 
     // Test
     testImplementation (Libraries.junit)
