@@ -100,6 +100,9 @@ dependencies {
     implementation (Libraries.material)
     implementation (Libraries.constraintLayout)
 
+    // Modules
+    implementation(project(Modules.logging))
+
     // Test
     testImplementation (Libraries.junit)
     androidTestImplementation (Libraries.junitTest)
