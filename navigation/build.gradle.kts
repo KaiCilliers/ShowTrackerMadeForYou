@@ -15,6 +15,9 @@ android {
     }
 
     buildTypes {
+        debug {
+            buildConfigField("String", "RootPackage", "\"com.sunrisekcdeveloper.showtracker\"")
+        }
         release {
             isMinifyEnabled = false
             proguardFiles(
