@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- All booleans, colors used to control system-ui (navigation bar colors or flags) -->
+<resources>
+    <!-- examples -->
+    <attr name="preferredStatusBarColor" format="color"/>
+    <attr name="preferDarkStatusBarIcons" format="boolean"/>
+</resources>

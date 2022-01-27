@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Platform.V23.Theme.ShowTracker" parent="Platform.V21.Theme.ShowTracker">
+        <!-- Attributes only available from api 23 -->
+        <!-- Here both will be set if min sdk is 23, if mi sdk is 21 then it wont be set! :) -->
+        <item name="android:windowLightStatusBar">?attr/preferDarkStatusBarIcons</item>
+        <item name="android:statusBarColor">?attr/preferredStatusBarColor</item>
+    </style>
+
+    <style name="Platform.Theme.ShowTracker" parent="Platform.V23.Theme.ShowTracker" />
+
+</resources>

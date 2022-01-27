@@ -17,3 +17,5 @@ rootProject.name = "ShowTracker - Made for You"
 include(":app")
 include(":logging")
 include(":ui-components")
+include(":navigation")
+include(":styles")
