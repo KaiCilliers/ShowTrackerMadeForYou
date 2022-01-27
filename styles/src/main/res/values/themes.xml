@@ -38,6 +38,19 @@
 
     <!-- Reminder - do not place hardcoded colour values here, only place everything common to all themes here -->
     <style name="Base.Theme.ShowTracker" parent="Platform.Theme.ShowTracker">
+        <item name="textAppearanceHeadline1">@style/TextAppearance.ShowTracker.Headline1</item>
+        <item name="textAppearanceHeadline2">@style/TextAppearance.ShowTracker.Headline2</item>
+        <item name="textAppearanceHeadline3">@style/TextAppearance.ShowTracker.Headline3</item>
+        <item name="textAppearanceHeadline4">@style/TextAppearance.ShowTracker.Headline4</item>
+        <item name="textAppearanceHeadline5">@style/TextAppearance.ShowTracker.Headline5</item>
+        <item name="textAppearanceHeadline6">@style/TextAppearance.ShowTracker.Headline6</item>
+        <item name="textAppearanceSubtitle1">@style/TextAppearance.ShowTracker.Subtitle1</item>
+        <item name="textAppearanceSubtitle2">@style/TextAppearance.ShowTracker.Subtitle2</item>
+        <item name="textAppearanceBody1">@style/TextAppearance.ShowTracker.Body1</item>
+        <item name="textAppearanceBody2">@style/TextAppearance.ShowTracker.Body2</item>
+        <item name="textAppearanceButton">@style/TextAppearance.ShowTracker.Button</item>
+        <item name="textAppearanceCaption">@style/TextAppearance.ShowTracker.Caption</item>
+        <item name="textAppearanceOverline">@style/TextAppearance.ShowTracker.Overline</item>
 <!--        <item name="tabStyle">@style/Widget.ShowTracker.TabLayoutLegacy</item>-->
 <!--        <item name="textInputStyle">@style/Widget.ShowTracker.TextInputLayout</item>-->
 <!--        <item name="toolbarStyle">@style/Widget.ShowTracker.Toolbar</item>-->
