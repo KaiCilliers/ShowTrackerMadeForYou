@@ -15,4 +15,6 @@ object Versions {
 
     const val timberVersion = "5.0.1"
     const val lifecycleVersion = "2.2.0"
+
+    const val koinVersion = "3.1.5"
 }
