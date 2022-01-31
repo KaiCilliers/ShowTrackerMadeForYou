@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Platform.V21.Theme.ShowTracker" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Attributes only available from api 21 -->
+    </style>
+
+    <style name="Platform.Theme.ShowTracker" parent="Platform.V21.Theme.ShowTracker" />
+</resources>
