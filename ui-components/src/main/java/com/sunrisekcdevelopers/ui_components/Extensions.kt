@@ -9,11 +9,11 @@ import android.view.View
 /**
  * [String] extensions
  */
-inline fun String.valid(
+inline fun String?.valid(
     crossinline yes: (String) -> Unit = {},
-    crossinline no: (String) -> Unit = {}
+    crossinline no: (String?) -> Unit = {}
 ) {
-    if (isNotEmpty()) yes(this) else no(this)
+    if (!isNullOrEmpty()) yes(this) else no(this)
 }
 
 /**
@@ -28,8 +28,9 @@ inline fun Float.valid(
 
 /**
  * [TypedArray] extensions
+ * todo confirm recycle is called
  */
-inline fun TypedArray.withRecycle(crossinline action: (TypedArray) -> Unit) {
+inline fun TypedArray.withRecycle(crossinline action: TypedArray.() -> Unit) {
     action(this)
     recycle()
 }

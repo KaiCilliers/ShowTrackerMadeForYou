@@ -5,4 +5,10 @@
         <attr name="strb_max_value" format="integer"/>
         <attr name="strb_star_padding" format="integer"/>
     </declare-styleable>
+
+    <declare-styleable name="StExpandableText">
+        <attr name="stet_startExpanded" format="boolean"/>
+        <attr name="stet_maxLines" format="integer"/>
+        <attr name="stet_disableCollapse" format="boolean"/>
+    </declare-styleable>
 </resources>
