@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.widget.LinearLayout
 import androidx.annotation.AttrRes
 import androidx.annotation.StyleRes
+import com.sunrisekcdevelopers.imageloading.StandardGlideImage
 import com.sunrisekcdevelopers.ui_components.components.st_media_core_details.MediaQuickSummary.Movie
 import com.sunrisekcdevelopers.ui_components.components.st_media_core_details.MediaQuickSummary.TVShow
 import com.sunrisekcdevelopers.ui_components.databinding.StMediaCoreDetailsBinding
@@ -68,7 +69,12 @@ class StMediaCoreDetails @JvmOverloads constructor(
             )
 
             posterUrl.let {
-                // use Glide to load in the image
+                // this image loading class needs to be injected (constructor)
+                StandardGlideImage().load(
+                    context = context,
+                    imgSrc = it,
+                    targetView = binding.stMediaMainDetailsPoster
+                )
             }
         }
     }

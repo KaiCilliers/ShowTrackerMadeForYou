@@ -3,4 +3,5 @@ object Modules {
     const val uiComponents = ":ui-components"
     const val styles = ":styles"
     const val navigation = ":navigation"
+    const val imageLoading = ":imageloading"
 }

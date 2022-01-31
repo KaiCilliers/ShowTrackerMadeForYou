@@ -14,10 +14,6 @@ android {
         consumerProguardFiles("consumer-rules.pro")
     }
 
-    buildFeatures {
-        viewBinding = true
-    }
-
     buildTypes {
         release {
             isMinifyEnabled = false
@@ -37,22 +33,10 @@ android {
 }
 
 dependencies {
-
     // Core
     implementation (Libraries.coreKtx)
     implementation (Libraries.appCompat)
 
-    // Lifecycle
-    implementation (Libraries.lifecycleRuntime)
-    implementation (Libraries.lifecycleCommon)
-    implementation (Libraries.lifecycleLiveData)
-    implementation (Libraries.lifecycleViewModel)
-
-    implementation (project(Modules.logging))
-    implementation(project(Modules.styles))
-    implementation(project(Modules.imageLoading))
-
-    implementation (Libraries.coroutine)
-    implementation (Libraries.ThirdParty.ratingBar)
-
+    // Image loading implementations
+    implementation (Libraries.glide)
 }

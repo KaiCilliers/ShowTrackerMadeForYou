@@ -26,6 +26,9 @@ object Libraries {
     // Coroutines
     const val coroutine = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.coroutineVersion}"
 
+    // Glide
+    const val glide = "com.github.bumptech.glide:glide:${Versions.glideVersion}"
+
     // Lifecycle
     const val lifecycleRuntime = "androidx.lifecycle:lifecycle-runtime:2.2.0"
     const val lifecycleCommon = "androidx.lifecycle:lifecycle-common-java8:2.2.0"

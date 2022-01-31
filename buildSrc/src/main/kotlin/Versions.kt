@@ -20,6 +20,8 @@ object Versions {
 
     const val coroutineVersion = "1.5.2"
 
+    const val glideVersion = "4.8.0"
+
     // 3rd party libraries
     object ThirdParty {
         const val ratingBarVersion = "1.5.1"
