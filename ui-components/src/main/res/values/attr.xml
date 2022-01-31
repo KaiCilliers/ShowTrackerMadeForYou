@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="StRatingBar">
+        <attr name="strb_show_value_indicator" format="boolean"/>
+        <attr name="strb_max_value" format="integer"/>
+        <attr name="strb_star_padding" format="integer"/>
+    </declare-styleable>
+</resources>

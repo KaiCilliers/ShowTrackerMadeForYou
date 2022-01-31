@@ -17,4 +17,11 @@ object Versions {
     const val lifecycleVersion = "2.2.0"
 
     const val koinVersion = "3.1.5"
+
+    const val coroutineVersion = "1.5.2"
+
+    // 3rd party libraries
+    object ThirdParty {
+        const val ratingBarVersion = "1.5.1"
+    }
 }

@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="view_coroutine_scope">view_coroutine_scope</string>
+    <string name="content_desc_media_poster">Poster image of movie or show.</string>
 </resources>

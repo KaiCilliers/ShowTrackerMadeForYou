@@ -42,9 +42,17 @@ dependencies {
     implementation (Libraries.coreKtx)
     implementation (Libraries.appCompat)
 
+    // Lifecycle
     implementation (Libraries.lifecycleRuntime)
     implementation (Libraries.lifecycleCommon)
     implementation (Libraries.lifecycleLiveData)
     implementation (Libraries.lifecycleViewModel)
+
+    implementation (project(Modules.logging))
+
+    implementation (Libraries.coroutine)
+    implementation (Libraries.ThirdParty.ratingBar)
+
+    implementation(project(Modules.styles))
 
 }

@@ -104,6 +104,8 @@ dependencies {
     implementation(project(Modules.logging))
     implementation(project(Modules.uiComponents))
 
+    implementation (Libraries.coroutine)
+
     // Test
     testImplementation (Libraries.junit)
     androidTestImplementation (Libraries.junitTest)

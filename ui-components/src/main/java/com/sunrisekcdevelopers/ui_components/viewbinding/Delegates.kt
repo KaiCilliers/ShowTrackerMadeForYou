@@ -1,4 +1,4 @@
-package com.sunrisekcdevelopers.ui_components
+package com.sunrisekcdevelopers.ui_components.viewbinding
 
 import android.view.LayoutInflater
 import android.view.View

@@ -13,17 +13,27 @@ object Libraries {
     const val junitTest = "androidx.test.ext:junit:${Versions.junitTestVersion}"
     const val espressoCore = "androidx.test.espresso:espresso-core:${Versions.espressoCoreVersion}"
 
+    // Logging
     const val timber = "com.jakewharton.timber:timber:${Versions.timberVersion}"
 
+    // Koin (Dependency Injection Framework)
     const val koinAndroid = "io.insert-koin:koin-android:${Versions.koinVersion}"
     const val koinWorkManger = "io.insert-koin:koin-androidx-workmanager:${Versions.koinVersion}"
     const val koinTest = "io.insert-koin:koin-test:${Versions.koinVersion}"
     const val koinJunit4 = "io.insert-koin:koin-test-junit4:${Versions.koinVersion}"
     const val koinJunit5 = "io.insert-koin:koin-test-junit5:${Versions.koinVersion}"
 
+    // Coroutines
+    const val coroutine = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.coroutineVersion}"
+
     // Lifecycle
     const val lifecycleRuntime = "androidx.lifecycle:lifecycle-runtime:2.2.0"
     const val lifecycleCommon = "androidx.lifecycle:lifecycle-common-java8:2.2.0"
     const val lifecycleViewModel = "androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0"
     const val lifecycleLiveData = "androidx.lifecycle:lifecycle-livedata-ktx:2.2.0"
+
+    // 3rd party libraries
+    object ThirdParty {
+        const val ratingBar = "com.github.ome450901:SimpleRatingBar:${Versions.ThirdParty.ratingBarVersion}"
+    }
 }

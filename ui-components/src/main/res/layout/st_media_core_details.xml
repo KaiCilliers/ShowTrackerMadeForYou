@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:parentTag="android.widget.LinearLayout">
+
+    <!-- Possible UI component -->
+    <ImageView
+        android:id="@+id/st_media_main_details_poster"
+        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:contentDescription="@string/content_desc_media_poster"
+        tools:src="@tools:sample/avatars"/>
+
+    <LinearLayout
+        android:id="@+id/st_media_main_details_content"
+        android:orientation="vertical"
+        android:layout_height="match_parent"
+        android:layout_width="wrap_content">
+
+        <com.sunrisekcdevelopers.ui_components.StTextViewTitle
+            android:id="@+id/st_media_main_details_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Breaking Bad"/>
+
+        <com.sunrisekcdevelopers.ui_components.StTextViewBody
+            android:id="@+id/st_media_main_details_year_directed_by"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="1996 - Directed by"/>
+
+        <com.sunrisekcdevelopers.ui_components.StTextViewBody
+            android:id="@+id/st_media_main_details_director"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            tools:text="Stephen King"/>
+
+        <com.sunrisekcdevelopers.ui_components.StTextViewBody
+            android:id="@+id/st_media_main_details_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            tools:visibility="visible"
+            tools:text="Finished"/>
+
+        <com.sunrisekcdevelopers.ui_components.StTextViewBody
+            android:id="@+id/st_media_main_details_runtime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            tools:visibility="visible"
+            tools:text="2h 40min"/>
+
+        <com.sunrisekcdevelopers.ui_components.components.StRatingBar
+            android:id="@+id/st_media_main_details_rating_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:strb_star_padding="2"/>
+
+    </LinearLayout>
+</merge>
