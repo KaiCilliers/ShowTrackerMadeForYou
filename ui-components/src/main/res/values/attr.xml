@@ -5,4 +5,13 @@
         <attr name="strb_max_value" format="integer"/>
         <attr name="strb_star_padding" format="integer"/>
     </declare-styleable>
+    <declare-styleable name="StActionable">
+        <attr name="stac_icon" format="enum">
+            <enum name="add" value="0"/>
+            <enum name="like" value="1"/>
+            <enum name="share" value="2"/>
+            <enum name="watch" value="3"/>
+        </attr>
+        <attr name="stac_text" format="string"/>
+    </declare-styleable>
 </resources>

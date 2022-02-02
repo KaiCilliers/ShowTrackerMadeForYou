@@ -29,7 +29,7 @@ inline fun Float.valid(
 /**
  * [TypedArray] extensions
  */
-inline fun TypedArray.withRecycle(crossinline action: (TypedArray) -> Unit) {
+inline fun TypedArray.withRecycle(crossinline action: TypedArray.() -> Unit) {
     action(this)
     recycle()
 }
