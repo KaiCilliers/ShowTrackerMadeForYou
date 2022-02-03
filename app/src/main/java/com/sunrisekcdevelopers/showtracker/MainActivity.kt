@@ -3,12 +3,14 @@ package com.sunrisekcdevelopers.showtracker
 import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import com.sunrisekcdevelopers.logging.timber
 import com.sunrisekcdevelopers.showtracker.databinding.ActivityMainBinding
 import com.sunrisekcdevelopers.ui_components.components.st_media_core_details.MediaQuickSummary
 import com.sunrisekcdevelopers.ui_components.components.st_media_core_details.MediaQuickSummary.Movie
 import com.sunrisekcdevelopers.ui_components.viewbinding.viewBinding
 import timber.log.Timber
+import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
     private val log by timber()
