@@ -42,8 +42,8 @@ class StProgressBar @JvmOverloads constructor(
             count = 0.0
         }
         binding.stProgressBarIndicator.setProgressPercentage(count)
-        count += 1
-        delay(100)
+        count += 10
+        delay(1000)
     }
 
     fun setOnCheckClickListener(action: View.() -> Unit) {
@@ -58,11 +58,16 @@ class StProgressBar @JvmOverloads constructor(
     }
 
     private fun toggleCheckMark() {
-        binding.stProgressBarCheck.setImageDrawable(ContextCompat.getDrawable(context,
         when(currentCheckMarkState) {
-            CheckMarkState.Off -> com.willy.ratingbar.R.drawable.empty
-            CheckMarkState.On -> com.willy.ratingbar.R.drawable.filled
-        }))
+            CheckMarkState.Off -> {
+                binding.stProgressBarIndicator.setProgressPercentage(0.0)
+                binding.stProgressBarCheck.setImageDrawable(ContextCompat.getDrawable(context,com.willy.ratingbar.R.drawable.empty))
+            }
+            CheckMarkState.On -> {
+                binding.stProgressBarIndicator.setProgressPercentage(100.0)
+                binding.stProgressBarCheck.setImageDrawable(ContextCompat.getDrawable(context, com.willy.ratingbar.R.drawable.filled))
+            }
+        }
     }
 
     sealed class CheckMarkState {
