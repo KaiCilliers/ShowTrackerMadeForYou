@@ -56,5 +56,6 @@ dependencies {
     implementation (Libraries.ThirdParty.ratingBar)
     implementation ("com.github.MackHartley:RoundedProgressBar:2.1.1")
     implementation(Libraries.constraintLayout)
+    implementation ("com.google.android.material:material:1.6.0-alpha02")
 
 }
