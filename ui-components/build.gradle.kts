@@ -54,5 +54,7 @@ dependencies {
 
     implementation (Libraries.coroutine)
     implementation (Libraries.ThirdParty.ratingBar)
+    implementation ("com.github.MackHartley:RoundedProgressBar:2.1.1")
+    implementation(Libraries.constraintLayout)
 
 }

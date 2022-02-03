@@ -38,5 +38,6 @@ object Libraries {
     // 3rd party libraries
     object ThirdParty {
         const val ratingBar = "com.github.ome450901:SimpleRatingBar:${Versions.ThirdParty.ratingBarVersion}"
+        const val roundedProgressBar = "com.github.MackHartley:RoundedProgressBar:${Versions.ThirdParty.roundedProgressBarVersion}"
     }
 }

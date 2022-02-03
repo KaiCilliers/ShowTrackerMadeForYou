@@ -25,5 +25,6 @@ object Versions {
     // 3rd party libraries
     object ThirdParty {
         const val ratingBarVersion = "1.5.1"
+        const val roundedProgressBarVersion = "2.1.1'"
     }
 }
