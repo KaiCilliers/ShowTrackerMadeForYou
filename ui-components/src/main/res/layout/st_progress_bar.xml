@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
+
+    <ImageView
+        android:id="@+id/st_progress_bar_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/empty"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/st_progress_bar_indicator"
+        tools:src="@drawable/empty"
+        tools:ignore="ContentDescription" />
+
+    <com.mackhartley.roundedprogressbar.RoundedProgressBar
+        android:id="@+id/st_progress_bar_indicator"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        app:rpbBackgroundColor="#F28969"
+        app:rpbBackgroundTextColor="#070600"
+        app:rpbCornerRadius="8dp"
+        app:rpbProgressColor="#070600"
+        app:rpbProgressTextColor="#F28969"
+        app:rpbTextPadding="12dp"
+        app:rpbShowProgressText="false"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/st_progress_bar_check"
+        app:layout_constraintEnd_toStartOf="@id/st_progress_bar_text_indicator"
+        tools:rpbProgress="44"/>
+
+    <TextView
+        android:id="@+id/st_progress_bar_text_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/st_progress_bar_indicator"
+        tools:text="34/100"/>
+
+</merge>

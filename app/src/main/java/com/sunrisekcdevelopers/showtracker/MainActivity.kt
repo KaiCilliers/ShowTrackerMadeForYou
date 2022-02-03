@@ -9,12 +9,17 @@ import com.sunrisekcdevelopers.showtracker.databinding.ActivityMainBinding
 import com.sunrisekcdevelopers.ui_components.components.st_media_core_details.MediaQuickSummary
 import com.sunrisekcdevelopers.ui_components.components.st_media_core_details.MediaQuickSummary.Movie
 import com.sunrisekcdevelopers.ui_components.viewbinding.viewBinding
+import kotlinx.coroutines.MainScope
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 import timber.log.Timber
 import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
     private val log by timber()
     private val binding by viewBinding(ActivityMainBinding::inflate)
+
+    private var count = 0.0
 
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,5 +40,10 @@ class MainActivity : AppCompatActivity() {
                 runtime = 888f
             )
         )
+        MainScope().launch {
+            while (true) {
+                binding.pbar.loop()
+            }
+        }
     }
 }
