@@ -45,5 +45,9 @@ class MainActivity : AppCompatActivity() {
                 binding.pbar.loop()
             }
         }
+        binding.wrap.setTitle("Genres")
+        binding.wrap.setTags(
+            listOf("English", "Portuguese", "Latin", "German", "Afrikaans", "Swedish", "Mandarin", "Japanese")
+        )
     }
 }
