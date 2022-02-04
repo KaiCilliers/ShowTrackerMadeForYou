@@ -6,12 +6,11 @@ import android.os.Bundle
 import android.widget.Toast
 import com.sunrisekcdevelopers.logging.timber
 import com.sunrisekcdevelopers.showtracker.databinding.ActivityMainBinding
+import com.sunrisekcdevelopers.ui_components.components.StPoster
 import com.sunrisekcdevelopers.ui_components.components.st_media_core_details.MediaQuickSummary
 import com.sunrisekcdevelopers.ui_components.components.st_media_core_details.MediaQuickSummary.Movie
 import com.sunrisekcdevelopers.ui_components.viewbinding.viewBinding
-import kotlinx.coroutines.MainScope
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
+import kotlinx.coroutines.*
 import timber.log.Timber
 import kotlin.random.Random
 
@@ -49,5 +48,29 @@ class MainActivity : AppCompatActivity() {
         binding.wrap.setTags(
             listOf("English", "Portuguese", "Latin", "German", "Afrikaans", "Swedish", "Mandarin", "Japanese")
         )
+
+        MainScope().launch {
+            while (true) {
+                movePosterIcon()
+            }
+        }
+    }
+
+    suspend fun movePosterIcon() {
+        delay(2000)
+        binding.posterr.setIconPlacement(StPoster.IconPlacement.TopRight)
+        binding.posterr.setCropType(StPoster.CropType.Circle)
+
+        delay(2000)
+        binding.posterr.setIconPlacement(StPoster.IconPlacement.TopLeft)
+        binding.posterr.setCropType(StPoster.CropType.Poster)
+
+        delay(2000)
+        binding.posterr.setIconPlacement(StPoster.IconPlacement.BottomLeft)
+        binding.posterr.setCropType(StPoster.CropType.Circle)
+
+        delay(2000)
+        binding.posterr.setIconPlacement(StPoster.IconPlacement.BottomRight)
+        binding.posterr.setCropType(StPoster.CropType.Poster)
     }
 }
