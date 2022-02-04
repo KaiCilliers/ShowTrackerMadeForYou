@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- See for reference https://material.io/develop/android/theming/shape -->
+<!-- more context https://medium.com/@ducvinh.bui88/tip-with-materialshapedrawable-a54e425d523f -->
+<!-- talk https://chris.banes.dev/developing-themes-with-style-berlin/ -->
+<!-- todo move to styles module -->
 <resources>
     <style name="ShapeAppearanceOverlay.ShowTracker.Circle" parent="">
         <item name="cornerFamily">rounded</item>

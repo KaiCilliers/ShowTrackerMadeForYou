@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    tools:padding="4dp"
+    tools:background="@drawable/rounded_corners"
+    tools:backgroundTint="@color/light_grey"
+    tools:parentTag="android.widget.LinearLayout">
+
+    <ImageView
+        android:id="@+id/st_banner_icon"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginStart="8dp"
+        tools:src="@drawable/heart_filled_24"
+        tools:ignore="ContentDescription" />
+
+    <com.sunrisekcdevelopers.ui_components.StTextViewBody
+        android:id="@+id/st_banner_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        tools:text="S02E05 in 6 days"/>
+
+</merge>

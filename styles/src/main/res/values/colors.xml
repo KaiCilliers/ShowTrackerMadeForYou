@@ -4,6 +4,10 @@
     <color name="white">#FFFFFF</color>
     <color name="off_white">#FFFFFF</color>
     <color name="dark_grey">#423E3E</color>
+    <!-- todo add these colors to themes with meaningful names -->
+    <color name="hot_pink">#F619D9</color>
+    <color name="light_grey">#B0B2B5</color>
+
 
     <!-- <color name="seed">#F6CD26</color>
         https://material-foundation.github.io/material-theme-builder/
