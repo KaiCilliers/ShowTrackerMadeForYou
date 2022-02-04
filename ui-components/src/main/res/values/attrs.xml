@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- todo renmae all attributes by using camel case-->
     <declare-styleable name="StRatingBar">
         <attr name="strb_show_value_indicator" format="boolean"/>
         <attr name="strb_max_value" format="integer"/>

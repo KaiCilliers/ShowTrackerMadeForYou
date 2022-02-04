@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- See for reference https://material.io/develop/android/theming/shape -->
+<resources>
+    <style name="ShapeAppearanceOverlay.ShowTracker.Circle" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+    <style name="ShapeAppearanceOverlay.ShowTracker.Cut" parent="">
+        <item name="cornerFamily">cut</item>
+        <item name="cornerSizeBottomRight">40%</item>
+        <item name="cornerSizeTopRight">40dp</item>
+    </style>
+</resources>
