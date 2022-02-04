@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.Toast
 import com.sunrisekcdevelopers.logging.timber
 import com.sunrisekcdevelopers.showtracker.databinding.ActivityMainBinding
+import com.sunrisekcdevelopers.ui_components.components.StBanner
 import com.sunrisekcdevelopers.ui_components.components.StPoster
 import com.sunrisekcdevelopers.ui_components.components.st_media_core_details.MediaQuickSummary
 import com.sunrisekcdevelopers.ui_components.components.st_media_core_details.MediaQuickSummary.Movie
@@ -54,6 +55,8 @@ class MainActivity : AppCompatActivity() {
                 movePosterIcon()
             }
         }
+        binding.banner.setMessage("S04E04 in 8 days")
+        binding.banner.setIcon(StBanner.BannerIcon.Share)
     }
 
     suspend fun movePosterIcon() {
