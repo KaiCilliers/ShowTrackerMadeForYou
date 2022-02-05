@@ -13,6 +13,7 @@ import androidx.core.content.ContextCompat
 import com.sunrisekcdevelopers.ui_components.R
 import com.sunrisekcdevelopers.ui_components.databinding.StProgressBarBinding
 import kotlinx.coroutines.delay
+import kotlin.math.max
 
 @SuppressLint("SetTextI18n")
 class StProgressBar @JvmOverloads constructor(
@@ -26,6 +27,8 @@ class StProgressBar @JvmOverloads constructor(
 
     private var count: Double = 0.0
     private var currentCheckMarkState: CheckMarkState = CheckMarkState.Off
+    private var progressVal: Double = 0.0
+    private var maxVal: Double = 100.0
 
 
     init {
@@ -36,35 +39,53 @@ class StProgressBar @JvmOverloads constructor(
         }
     }
 
+    fun setData(progress: Double, max: Double) {
+        progressVal = progress
+        maxVal = max
+        updateUi()
+    }
+
+    private fun updateUi() {
+        binding.stProgressBarTextIndicator.text = "$progressVal/$maxVal"
+        binding.stProgressBarIndicator.setProgressPercentage((progressVal/maxVal)*100)
+        if (progressVal == maxVal && currentCheckMarkState == CheckMarkState.Off) {
+            currentCheckMarkState = CheckMarkState.On
+            toggleCheckMark()
+        } else if (progressVal != maxVal && currentCheckMarkState == CheckMarkState.On) {
+            currentCheckMarkState = CheckMarkState.Off
+            toggleCheckMark()
+        }
+    }
+
     // Just for display purposes
     suspend fun loop() {
-        if (count >= 100) {
+        if (count > 100) {
             count = 0.0
         }
-        binding.stProgressBarIndicator.setProgressPercentage(count)
+        progressVal = count
+        updateUi()
         count += 10
         delay(1000)
     }
 
-    fun setOnCheckClickListener(action: View.() -> Unit) {
+    fun setOnCheckClickListener(action: (newState: CheckMarkState) -> Unit) {
         binding.stProgressBarCheck.setOnClickListener {
             currentCheckMarkState = when (currentCheckMarkState) {
                 CheckMarkState.Off -> CheckMarkState.On
                 CheckMarkState.On -> CheckMarkState.Off
             }
             toggleCheckMark()
-            action(this)
+            action(currentCheckMarkState)
+            updateUi()
         }
     }
 
     private fun toggleCheckMark() {
         when(currentCheckMarkState) {
             CheckMarkState.Off -> {
-                binding.stProgressBarIndicator.setProgressPercentage(0.0)
                 binding.stProgressBarCheck.setImageDrawable(ContextCompat.getDrawable(context,com.willy.ratingbar.R.drawable.empty))
             }
             CheckMarkState.On -> {
-                binding.stProgressBarIndicator.setProgressPercentage(100.0)
                 binding.stProgressBarCheck.setImageDrawable(ContextCompat.getDrawable(context, com.willy.ratingbar.R.drawable.filled))
             }
         }

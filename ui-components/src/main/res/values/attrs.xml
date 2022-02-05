@@ -22,4 +22,9 @@
         </attr>
         <attr name="stac_text" format="string"/>
     </declare-styleable>
+
+    <!-- todo how to preview setting an image in xml preview pane? -->
+    <declare-styleable name="StPoster">
+        <attr name="stpImgSrc" format="reference"/>
+    </declare-styleable>
 </resources>

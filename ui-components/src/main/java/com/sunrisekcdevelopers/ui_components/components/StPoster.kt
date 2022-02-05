@@ -1,5 +1,6 @@
 package com.sunrisekcdevelopers.ui_components.components
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.transition.TransitionManager
 import android.util.AttributeSet
@@ -12,15 +13,18 @@ import androidx.annotation.AttrRes
 import androidx.annotation.StyleRes
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.constraintlayout.widget.ConstraintSet
+import androidx.core.content.ContextCompat
 import com.google.android.material.shape.ShapeAppearanceModel
 import com.sunrisekcdevelopers.imageloading.StandardGlideImage
 import com.sunrisekcdevelopers.ui_components.R
 import com.sunrisekcdevelopers.ui_components.databinding.StPosterBinding
 import com.sunrisekcdevelopers.ui_components.gone
 import com.sunrisekcdevelopers.ui_components.visible
+import com.sunrisekcdevelopers.ui_components.withRecycle
 
 // you can extend and create some standard uses (like a circle crop or different poster sizes)
 // maybe diff component for diff default behaviour
+@SuppressLint("Recycle")
 class StPoster @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
@@ -35,6 +39,11 @@ class StPoster @JvmOverloads constructor(
     private val binding: StPosterBinding = StPosterBinding.inflate(LayoutInflater.from(context), this)
 
     init {
+//        context.obtainStyledAttributes(attrs, R.styleable.StPoster).withRecycle {
+//            getResourceId(R.styleable.StPoster_stpImgSrc, 0).also {
+//                binding.stPosterImage.background = ContextCompat.getDrawable(context, it)
+//            }
+//        }
         StandardGlideImage().load(
             context = context,
             imgSrc = "https://i.guim.co.uk/img/media/fe1e34da640c5c56ed16f76ce6f994fa9343d09d/0_174_3408_2046/master/3408.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=67773a9d419786091c958b2ad08eae5e",
