@@ -8,6 +8,7 @@ import com.sunrisekcdevelopers.logging.timber
 import com.sunrisekcdevelopers.showtracker.databinding.ActivityMainBinding
 import com.sunrisekcdevelopers.ui_components.components.StBanner
 import com.sunrisekcdevelopers.ui_components.components.StPoster
+import com.sunrisekcdevelopers.ui_components.components.StProgressBar
 import com.sunrisekcdevelopers.ui_components.components.st_media_core_details.MediaQuickSummary
 import com.sunrisekcdevelopers.ui_components.components.st_media_core_details.MediaQuickSummary.Movie
 import com.sunrisekcdevelopers.ui_components.viewbinding.viewBinding
@@ -40,6 +41,16 @@ class MainActivity : AppCompatActivity() {
                 runtime = 888f
             )
         )
+        binding.pbar.setOnCheckClickListener {
+            when (it) {
+                StProgressBar.CheckMarkState.Off -> {
+                    binding.pbar.setData(0.0, 100.0)
+                }
+                StProgressBar.CheckMarkState.On -> {
+                    binding.pbar.setData(100.0, 100.0)
+                }
+            }
+        }
         MainScope().launch {
             while (true) {
                 binding.pbar.loop()
