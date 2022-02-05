@@ -66,14 +66,28 @@ class MainActivity : AppCompatActivity() {
                 movePosterIcon()
             }
         }
+        binding.posterr.setImage("https://i.guim.co.uk/img/media/fe1e34da640c5c56ed16f76ce6f994fa9343d09d/0_174_3408_2046/master/3408.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=67773a9d419786091c958b2ad08eae5e")
+
         binding.banner.setMessage("S04E04 in 8 days")
         binding.banner.setIcon(StBanner.BannerIcon.Share)
 
         binding.seasonProgress.setTitle("aldkjasdjakldasdjalkd")
         binding.seasonProgress.setMaxValue(55.0)
         binding.seasonProgress.setProgress(44.0)
+        binding.seasonProgress.setPosterImage("https://i.guim.co.uk/img/media/fe1e34da640c5c56ed16f76ce6f994fa9343d09d/0_174_3408_2046/master/3408.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=67773a9d419786091c958b2ad08eae5e")
         binding.seasonProgress.setBannerMessage("banner")
         binding.seasonProgress.showBanner()
+
+        binding.watchItem.setSeasonTitle("Friends")
+        binding.watchItem.setEpisodeTitle("S04E12 · Rachel eats frog legs")
+        binding.watchItem.setSeasonData(12, 48)
+        binding.watchItem.setSeasonPoster("https://i.guim.co.uk/img/media/fe1e34da640c5c56ed16f76ce6f994fa9343d09d/0_174_3408_2046/master/3408.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=67773a9d419786091c958b2ad08eae5e")
+        binding.watchItem.setOnActionIconClickListener {
+            binding.watchItem.setSeasonData(
+                binding.watchItem.getCurrentProgress() + 1,
+                48
+            )
+        }
     }
 
     suspend fun movePosterIcon() {

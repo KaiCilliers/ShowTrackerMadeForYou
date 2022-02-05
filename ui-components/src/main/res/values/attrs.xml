@@ -26,5 +26,11 @@
     <!-- todo how to preview setting an image in xml preview pane? -->
     <declare-styleable name="StPoster">
         <attr name="stpImgSrc" format="reference"/>
+        <attr name="stpHideIcon" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="StProgressBar">
+        <attr name="stpbHideIcon" format="boolean"/>
+        <attr name="stpbHideLabel" format="boolean"/>
     </declare-styleable>
 </resources>

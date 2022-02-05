@@ -11,6 +11,7 @@
         android:layout_width="100dp"
         android:layout_height="120dp"
         android:layout_margin="4dp"
+        app:stpHideIcon="true"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

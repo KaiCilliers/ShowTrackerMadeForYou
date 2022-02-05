@@ -43,6 +43,10 @@ class StSeasonProgress @JvmOverloads constructor(
         setProgress()
     }
 
+    fun setPosterImage(url: String) {
+        binding.stSeasonProgressPoster.setImage(url)
+    }
+
     fun showBanner(show: Boolean = true) {
         if (show)
             binding.stSeasonProgressBanner.visible()
