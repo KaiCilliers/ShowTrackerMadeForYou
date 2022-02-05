@@ -105,6 +105,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
+        <com.sunrisekcdevelopers.ui_components.components.StSeasonProgress
+            android:id="@+id/season_progress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
         </LinearLayout>
     </ScrollView>
 

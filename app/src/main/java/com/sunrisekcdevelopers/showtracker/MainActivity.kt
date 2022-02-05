@@ -68,6 +68,12 @@ class MainActivity : AppCompatActivity() {
         }
         binding.banner.setMessage("S04E04 in 8 days")
         binding.banner.setIcon(StBanner.BannerIcon.Share)
+
+        binding.seasonProgress.setTitle("aldkjasdjakldasdjalkd")
+        binding.seasonProgress.setMaxValue(55.0)
+        binding.seasonProgress.setProgress(44.0)
+        binding.seasonProgress.setBannerMessage("banner")
+        binding.seasonProgress.showBanner()
     }
 
     suspend fun movePosterIcon() {
