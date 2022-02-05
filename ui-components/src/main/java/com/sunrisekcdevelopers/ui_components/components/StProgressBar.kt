@@ -12,10 +12,13 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import com.sunrisekcdevelopers.ui_components.R
 import com.sunrisekcdevelopers.ui_components.databinding.StProgressBarBinding
+import com.sunrisekcdevelopers.ui_components.gone
+import com.sunrisekcdevelopers.ui_components.visible
+import com.sunrisekcdevelopers.ui_components.withRecycle
 import kotlinx.coroutines.delay
 import kotlin.math.max
 
-@SuppressLint("SetTextI18n")
+@SuppressLint("SetTextI18n", "Recycle")
 class StProgressBar @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
@@ -32,10 +35,11 @@ class StProgressBar @JvmOverloads constructor(
 
 
     init {
-        binding.stProgressBarTextIndicator.text = "34/100"
+        // this is enabled just for now - should pref be disabled
         binding.stProgressBarIndicator.showProgressText(true)
-        setOnCheckClickListener {
-            println("ok")
+        context.obtainStyledAttributes(attrs, R.styleable.StProgressBar).withRecycle {
+            getBoolean(R.styleable.StProgressBar_stpbHideIcon, false).also { toggleIconVisibility(it) }
+            getBoolean(R.styleable.StProgressBar_stpbHideLabel, false).also { toggleIconVisibility(it) }
         }
     }
 
@@ -48,10 +52,10 @@ class StProgressBar @JvmOverloads constructor(
     private fun updateUi() {
         binding.stProgressBarTextIndicator.text = "$progressVal/$maxVal"
         binding.stProgressBarIndicator.setProgressPercentage((progressVal/maxVal)*100)
-        if (progressVal == maxVal && currentCheckMarkState == CheckMarkState.Off) {
+        if (progressVal >= maxVal && currentCheckMarkState == CheckMarkState.Off) {
             currentCheckMarkState = CheckMarkState.On
             toggleCheckMark()
-        } else if (progressVal != maxVal && currentCheckMarkState == CheckMarkState.On) {
+        } else if (progressVal < maxVal && currentCheckMarkState == CheckMarkState.On) {
             currentCheckMarkState = CheckMarkState.Off
             toggleCheckMark()
         }
@@ -88,6 +92,20 @@ class StProgressBar @JvmOverloads constructor(
             CheckMarkState.On -> {
                 binding.stProgressBarCheck.setImageDrawable(ContextCompat.getDrawable(context, com.willy.ratingbar.R.drawable.filled))
             }
+        }
+    }
+
+    private fun toggleIconVisibility(hide: Boolean) {
+        when (hide) {
+            true -> binding.stProgressBarCheck.gone()
+            false -> binding.stProgressBarCheck.visible()
+        }
+    }
+
+    private fun toggleLabelVisibility(hide: Boolean) {
+        when (hide) {
+            true -> { binding.stProgressBarCheck.gone() }
+            false -> { binding.stProgressBarCheck.visible() }
         }
     }
 

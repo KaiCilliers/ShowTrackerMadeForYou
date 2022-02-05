@@ -39,14 +39,23 @@ class StPoster @JvmOverloads constructor(
     private val binding: StPosterBinding = StPosterBinding.inflate(LayoutInflater.from(context), this)
 
     init {
-//        context.obtainStyledAttributes(attrs, R.styleable.StPoster).withRecycle {
-//            getResourceId(R.styleable.StPoster_stpImgSrc, 0).also {
-//                binding.stPosterImage.background = ContextCompat.getDrawable(context, it)
-//            }
-//        }
+        context.obtainStyledAttributes(attrs, R.styleable.StPoster).withRecycle {
+            getBoolean(R.styleable.StPoster_stpHideIcon, false).also { toggleIconVisibility(it) }
+        }
+    }
+
+    private fun toggleIconVisibility(hide: Boolean) {
+        when (hide) {
+            true -> binding.stPosterActionIcon.gone()
+            false -> binding.stPosterActionIcon.visible()
+        }
+    }
+
+    fun setImage(url: String) {
+        // this image loading class needs to be injected (constructor)
         StandardGlideImage().load(
             context = context,
-            imgSrc = "https://i.guim.co.uk/img/media/fe1e34da640c5c56ed16f76ce6f994fa9343d09d/0_174_3408_2046/master/3408.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=67773a9d419786091c958b2ad08eae5e",
+            imgSrc = url,
             targetView = binding.stPosterImage
         )
     }

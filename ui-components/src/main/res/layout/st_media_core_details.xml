@@ -7,7 +7,7 @@
     android:layout_height="wrap_content"
     tools:parentTag="android.widget.LinearLayout">
 
-    <!-- Possible UI component -->
+    <!-- todo replace with StPoster -->
     <ImageView
         android:id="@+id/st_media_main_details_poster"
         android:layout_height="match_parent"
