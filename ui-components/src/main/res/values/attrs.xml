@@ -27,10 +27,21 @@
     <declare-styleable name="StPoster">
         <attr name="stpImgSrc" format="reference"/>
         <attr name="stpHideIcon" format="boolean"/>
+        <attr name="stpCropType" format="enum">
+            <enum name="poster" value="0"/>
+            <enum name="circle" value="1"/>
+        </attr>
     </declare-styleable>
 
     <declare-styleable name="StProgressBar">
         <attr name="stpbHideIcon" format="boolean"/>
         <attr name="stpbHideLabel" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="StPersonProfile">
+        <attr name="stppPersonName" format="string"/>
+        <attr name="stppYearOfBirth" format="string"/>
+        <attr name="stppAddress" format="string"/>
+        <attr name="stppCountry" format="string"/>
     </declare-styleable>
 </resources>

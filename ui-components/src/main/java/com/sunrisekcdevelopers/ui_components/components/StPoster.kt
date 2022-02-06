@@ -41,6 +41,16 @@ class StPoster @JvmOverloads constructor(
     init {
         context.obtainStyledAttributes(attrs, R.styleable.StPoster).withRecycle {
             getBoolean(R.styleable.StPoster_stpHideIcon, false).also { toggleIconVisibility(it) }
+            getInt(R.styleable.StPoster_stpCropType, 0).also {
+                when (it) {
+                    1 -> {
+                        setCropTypeV2(CropType.Circle)
+                    }
+                    else -> {
+                        setCropTypeV2(CropType.Poster)
+                    }
+                }
+            }
         }
     }
 
@@ -70,13 +80,17 @@ class StPoster @JvmOverloads constructor(
     }
 
     // suspend for testing purposes
+    @Suppress("RedundantSuspendModifier")
     suspend fun setCropType(type: CropType) {
         cropType = type
         cropImage()
     }
+    fun setCropTypeV2(type: CropType) {
+        cropType = type
+        cropImage()
+    }
 
-    @Suppress("RedundantSuspendModifier")
-    private suspend fun cropImage() {
+    private fun cropImage() {
         TransitionManager.beginDelayedTransition(binding.root as ConstraintLayout)
         when (cropType) {
             CropType.Circle -> {
@@ -183,9 +197,8 @@ class StPoster @JvmOverloads constructor(
         object BottomLeft : IconPlacement()
     }
 
-    sealed class CropType {
-        object Circle : CropType()
-        object Poster : CropType()
+    sealed interface CropType {
+        object Circle : CropType
+        object Poster : CropType
     }
-
 }
