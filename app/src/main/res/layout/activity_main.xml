@@ -115,6 +115,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
 
+            <com.sunrisekcdevelopers.ui_components.components.StPersonProfile
+                android:id="@+id/profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:stppPersonName="name"
+                app:stppYearOfBirth="year of birth"
+                app:stppAddress="address line"
+                app:stppCountry="count"/>
+
         </LinearLayout>
     </ScrollView>
 
