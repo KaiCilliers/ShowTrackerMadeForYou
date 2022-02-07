@@ -9,13 +9,11 @@ import com.sunrisekcdevelopers.showtracker.databinding.ActivityMainBinding
 import com.sunrisekcdevelopers.ui_components.components.StBanner
 import com.sunrisekcdevelopers.ui_components.components.StPoster
 import com.sunrisekcdevelopers.ui_components.components.StProgressBar
-import com.sunrisekcdevelopers.ui_components.components.StSettingMenuItem
-import com.sunrisekcdevelopers.ui_components.components.st_media_core_details.MediaQuickSummary
+import com.sunrisekcdevelopers.ui_components.components.st_setting_menu_item.StSettingMenuItem
 import com.sunrisekcdevelopers.ui_components.components.st_media_core_details.MediaQuickSummary.Movie
 import com.sunrisekcdevelopers.ui_components.viewbinding.viewBinding
 import kotlinx.coroutines.*
 import timber.log.Timber
-import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
     private val log by timber()
@@ -103,6 +101,10 @@ class MainActivity : AppCompatActivity() {
             setSwitchState(StSettingMenuItem.SwitchState.On)
             setTitle("Subgroup")
             setCaption("Current Selection")
+        }
+
+        binding.setttingSubGroup.setOnClickNavAction {
+            Toast.makeText(context, "clicked", Toast.LENGTH_SHORT).show()
         }
     }
 

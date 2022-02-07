@@ -1,9 +1,10 @@
-package com.sunrisekcdevelopers.ui_components.components
+package com.sunrisekcdevelopers.ui_components.components.st_setting_menu_item
 
 import android.content.Context
 import android.content.res.ColorStateList
 import android.util.AttributeSet
 import android.view.LayoutInflater
+import android.view.View
 import androidx.annotation.AttrRes
 import androidx.annotation.StyleRes
 import androidx.constraintlayout.widget.ConstraintLayout
@@ -13,7 +14,7 @@ import com.sunrisekcdevelopers.ui_components.databinding.StSettingMenuItemBindin
 import com.sunrisekcdevelopers.ui_components.gone
 import com.sunrisekcdevelopers.ui_components.visible
 
-class StSettingMenuItem @JvmOverloads constructor(
+open class StSettingMenuItem @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
     @AttrRes defStyleAttr: Int = 0,
@@ -71,6 +72,10 @@ class StSettingMenuItem @JvmOverloads constructor(
     fun setSwitchState(state: SwitchState) {
         switchState = state
         toggleSwitchState()
+    }
+
+    fun setOnActionClickAction(action: View.() -> Unit) {
+        binding.root.setOnClickListener { action(it) }
     }
 
     private fun addSwitchToggleListener() {

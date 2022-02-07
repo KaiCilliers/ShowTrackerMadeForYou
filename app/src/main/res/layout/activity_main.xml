@@ -135,10 +135,17 @@
                 android:layout_width="200dp"
                 android:layout_height="240dp"/>
 
-            <com.sunrisekcdevelopers.ui_components.components.StSettingMenuItem
+            <com.sunrisekcdevelopers.ui_components.components.st_setting_menu_item.StSettingMenuItem
                 android:id="@+id/settingBase"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
+
+            <com.sunrisekcdevelopers.ui_components.components.st_setting_menu_item.StSettingSubGroup
+                android:id="@+id/setttingSubGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:stssgSubGroupTitle="Current Version"
+                app:stssgCurrentSelection="v2.14.69"/>
 
         </LinearLayout>
     </ScrollView>
