@@ -147,6 +147,11 @@
                 app:stssgSubGroupTitle="Current Version"
                 app:stssgCurrentSelection="v2.14.69"/>
 
+            <com.sunrisekcdevelopers.ui_components.components.st_setting_menu_item.StSettingSwitch
+                android:id="@+id/settingSwitch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
         </LinearLayout>
     </ScrollView>
 

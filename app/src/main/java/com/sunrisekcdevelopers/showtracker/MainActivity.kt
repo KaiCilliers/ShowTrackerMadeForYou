@@ -106,6 +106,8 @@ class MainActivity : AppCompatActivity() {
         binding.setttingSubGroup.setOnClickNavAction {
             Toast.makeText(context, "clicked", Toast.LENGTH_SHORT).show()
         }
+
+        binding.settingSwitch.setSettingName("Setting Toggle")
     }
 
     suspend fun movePosterIcon() {
