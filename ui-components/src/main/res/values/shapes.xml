@@ -8,6 +8,13 @@
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">50%</item>
     </style>
+    <!-- todo this puts an outline as a square and not the circle - keeping this here as reference to create circle outline -->
+    <style name="ShapeAppearanceOverlay.ShowTracker.CircleOutline" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+        <item name="strokeColor">@color/error</item>
+        <item name="strokeWidth">20dp</item>
+    </style>
     <style name="ShapeAppearanceOverlay.ShowTracker.Cut" parent="">
         <item name="cornerFamily">cut</item>
         <item name="cornerSizeBottomRight">40%</item>

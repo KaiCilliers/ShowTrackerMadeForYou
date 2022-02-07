@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
+
+    <!-- todo this component needs to be outlined with a colour (green when checkmark is used) -->
+    <!-- todo this component needs a transparent background with a blur effect -->
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/st_number_toggle_shape"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.ShowTracker.CircleOutline"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/hot_pink"
+        tools:background="@color/hot_pink"/>
+
+    <!-- todo use a textoverlay to override the textsize using StBody textview-->
+    <TextView
+        android:id="@+id/st_number_toggle_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="50sp"
+        style="@style/TextAppearance.ShowTracker.Body1"
+        app:layout_constraintTop_toTopOf="@id/st_number_toggle_shape"
+        app:layout_constraintStart_toStartOf="@id/st_number_toggle_shape"
+        app:layout_constraintEnd_toEndOf="@id/st_number_toggle_shape"
+        app:layout_constraintBottom_toBottomOf="@id/st_number_toggle_shape"
+        tools:text="7"/>
+
+    <ImageView
+        android:id="@+id/st_number_toggle_checkmark"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/check_24"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:visibility="visible"
+        tools:ignore="ContentDescription" />
+
+</merge>
