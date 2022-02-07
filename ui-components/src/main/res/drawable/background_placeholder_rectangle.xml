@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Intended to be used as background to view and then set desired colour using background tint -->
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
     android:shape="rectangle">
     <solid android:color="@color/hot_pink"/>
-    <corners android:radius="10dp"/>
 </shape>

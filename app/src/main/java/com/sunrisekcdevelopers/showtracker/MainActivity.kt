@@ -9,6 +9,7 @@ import com.sunrisekcdevelopers.showtracker.databinding.ActivityMainBinding
 import com.sunrisekcdevelopers.ui_components.components.StBanner
 import com.sunrisekcdevelopers.ui_components.components.StPoster
 import com.sunrisekcdevelopers.ui_components.components.StProgressBar
+import com.sunrisekcdevelopers.ui_components.components.StSettingMenuItem
 import com.sunrisekcdevelopers.ui_components.components.st_media_core_details.MediaQuickSummary
 import com.sunrisekcdevelopers.ui_components.components.st_media_core_details.MediaQuickSummary.Movie
 import com.sunrisekcdevelopers.ui_components.viewbinding.viewBinding
@@ -95,6 +96,14 @@ class MainActivity : AppCompatActivity() {
 
         binding.seasonEpi.setNumber(8)
         binding.seasonEpi.setImage("https://i.guim.co.uk/img/media/fe1e34da640c5c56ed16f76ce6f994fa9343d09d/0_174_3408_2046/master/3408.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=67773a9d419786091c958b2ad08eae5e")
+
+        binding.settingBase.apply {
+            showLeftIcon()
+            showSwitchComponent()
+            setSwitchState(StSettingMenuItem.SwitchState.On)
+            setTitle("Subgroup")
+            setCaption("Current Selection")
+        }
     }
 
     suspend fun movePosterIcon() {

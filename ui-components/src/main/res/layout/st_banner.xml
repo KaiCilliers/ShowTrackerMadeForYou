@@ -5,7 +5,7 @@
     android:layout_height="wrap_content"
     android:orientation="horizontal"
     tools:padding="4dp"
-    tools:background="@drawable/rounded_corners"
+    tools:background="@drawable/background_placeholder_rounded_corners"
     tools:backgroundTint="@color/light_grey"
     tools:parentTag="android.widget.LinearLayout">
 
