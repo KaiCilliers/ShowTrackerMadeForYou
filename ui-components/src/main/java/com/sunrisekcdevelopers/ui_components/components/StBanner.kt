@@ -8,8 +8,6 @@ import android.widget.LinearLayout
 import androidx.annotation.AttrRes
 import androidx.annotation.StyleRes
 import androidx.core.content.ContextCompat
-import androidx.core.content.res.ResourcesCompat
-import androidx.core.graphics.drawable.DrawableCompat
 import com.sunrisekcdevelopers.ui_components.R
 import com.sunrisekcdevelopers.ui_components.databinding.StBannerBinding
 import com.sunrisekcdevelopers.ui_components.dp
@@ -27,7 +25,7 @@ class StBanner @JvmOverloads constructor(
 
     init {
         clipToOutline = true
-        binding.root.background = ContextCompat.getDrawable(context, R.drawable.rounded_corners)
+        binding.root.background = ContextCompat.getDrawable(context, R.drawable.background_placeholder_rounded_corners)
         // todo fetch ?attr value with symantic meaning - not color directly (take from theme - so that when theme changes so does this color)
         binding.root.backgroundTintList = ColorStateList.valueOf(ContextCompat.getColor(context, com.sunrisekcdevelopers.styles.R.color.light_grey))
         binding.root.setPadding(4.dp, 4.dp, 4.dp, 4.dp)

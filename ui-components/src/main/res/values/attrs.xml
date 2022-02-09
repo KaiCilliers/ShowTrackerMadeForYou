@@ -44,4 +44,13 @@
         <attr name="stppAddress" format="string"/>
         <attr name="stppCountry" format="string"/>
     </declare-styleable>
+
+    <declare-styleable name="StSettingSubGroup">
+        <attr name="stssgSubGroupTitle" format="string"/>
+        <attr name="stssgCurrentSelection" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="StSettingGroupItem">
+        <attr name="ssgiChecked" format="boolean"/>
+    </declare-styleable>
 </resources>
