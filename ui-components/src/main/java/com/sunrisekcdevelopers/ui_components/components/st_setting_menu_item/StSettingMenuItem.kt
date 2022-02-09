@@ -13,6 +13,7 @@ import com.sunrisekcdevelopers.styles.R
 import com.sunrisekcdevelopers.ui_components.databinding.StSettingMenuItemBinding
 import com.sunrisekcdevelopers.ui_components.gone
 import com.sunrisekcdevelopers.ui_components.visible
+import kotlin.random.Random
 
 open class StSettingMenuItem @JvmOverloads constructor(
     context: Context,
@@ -24,12 +25,15 @@ open class StSettingMenuItem @JvmOverloads constructor(
     private val binding: StSettingMenuItemBinding = StSettingMenuItemBinding.inflate(LayoutInflater.from(context), this)
 
     private var switchState: SwitchState = SwitchState.Off
+    private var isChecked: Boolean = false
 
     init {
         // this is set here since the colors aren't applied when simply set on XML
         binding.root.background = ContextCompat.getDrawable(context, com.sunrisekcdevelopers.ui_components.R.drawable.background_placeholder_rectangle)
         binding.root.backgroundTintList = ColorStateList.valueOf(ContextCompat.getColor(context, R.color.light_grey))
     }
+
+    fun isChecked(): Boolean = isChecked
 
     fun setTitle(title: String) {
         if (title.isNotEmpty()) {
