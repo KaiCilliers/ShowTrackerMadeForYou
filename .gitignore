@@ -9,6 +9,8 @@
 /captures
 .cxx
 
+keys.properties
+
 #built application files
 *.apk
 *.ap_
