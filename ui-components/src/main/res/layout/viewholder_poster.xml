@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- viewholder needs to be suffix and not prefix-->
+<com.sunrisekcdevelopers.ui_components.components.StPoster
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/viewholder_poster"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"/>

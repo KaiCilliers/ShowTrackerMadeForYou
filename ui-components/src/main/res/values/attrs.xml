@@ -53,4 +53,8 @@
     <declare-styleable name="StSettingGroupItem">
         <attr name="ssgiChecked" format="boolean"/>
     </declare-styleable>
+
+    <declare-styleable name="StCollapsableSection">
+        <attr name="stcsTitle" format="string"/>
+    </declare-styleable>
 </resources>
