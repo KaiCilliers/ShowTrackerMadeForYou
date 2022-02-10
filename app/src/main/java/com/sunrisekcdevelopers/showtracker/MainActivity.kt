@@ -108,6 +108,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.settingSwitch.setSettingName("Setting Toggle")
+
+        binding.collapseList.setTitle("Watched Movies")
     }
 
     suspend fun movePosterIcon() {

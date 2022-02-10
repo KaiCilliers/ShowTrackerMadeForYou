@@ -22,6 +22,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="200dp"/>
 
+            <com.sunrisekcdevelopers.ui_components.components.StCollapsableSection
+                android:id="@+id/collapseList"
+                android:background="@color/light_grey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
         <TextView
             android:id="@+id/test_text"
             android:layout_width="wrap_content"

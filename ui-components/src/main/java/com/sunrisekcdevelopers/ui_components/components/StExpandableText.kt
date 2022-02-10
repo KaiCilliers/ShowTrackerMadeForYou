@@ -19,6 +19,7 @@ import com.sunrisekcdevelopers.ui_components.R.*
 import kotlin.properties.Delegates
 
 // Source https://medium.com/@yuriyskul/expandable-textview-with-layouttransition-part-1-b506681e78e7
+// bug where "see more" is included in original text
 @SuppressLint("Recycle")
 class StExpandableText @JvmOverloads constructor(
     private val ctxt: Context,
@@ -48,6 +49,7 @@ class StExpandableText @JvmOverloads constructor(
     companion object {
         private const val MAX_LINES_DEF = 3
         // todo use string resource
+        // consider removing see more and add ellipse with black bottom gradient to indicate there is more text
         private const val POSTFIX = "...see more "
     }
 
