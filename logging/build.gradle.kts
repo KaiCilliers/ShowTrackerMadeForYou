@@ -37,5 +37,6 @@ dependencies {
     implementation (Libraries.coreKtx)
     implementation (Libraries.appCompat)
 
+    // Logging
     api (Libraries.timber)
 }
