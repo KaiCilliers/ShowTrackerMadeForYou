@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- todo remove background and tint and replace with rectangle border with rounded corners -->
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_placeholder_rounded_corners"
+    android:backgroundTint="@color/light_grey"
+    tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
+
+    <ImageView
+        android:id="@+id/st_search_bar_icon_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:src="@drawable/search_24"
+        tools:ignore="ContentDescription" />
+
+    <!-- I want to hide the bottom line of the edittext see https://stackoverflow.com/questions/37824790/how-to-remove-underline-below-edittext-indicator -->
+    <EditText
+        android:id="@+id/st_search_bar_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Search Term"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/st_search_bar_icon_search"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/st_search_bar_icon_close"
+        tools:ignore="Autofill,TextFields" />
+
+    <ImageView
+        android:id="@+id/st_search_bar_icon_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/close_24"
+        android:visibility="invisible"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:visibility="visible"
+        tools:ignore="ContentDescription" />
+
+</merge>

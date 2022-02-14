@@ -110,6 +110,13 @@ class MainActivity : AppCompatActivity() {
         binding.settingSwitch.setSettingName("Setting Toggle")
 
         binding.collapseList.setTitle("Watched Movies")
+
+        binding.searchbarmain.setOnQueryTextChangeListener { text, start, before, count ->
+            println("text = $text")
+            println("start = $start")
+            println("count = $count")
+            println("before = $before")
+        }
     }
 
     suspend fun movePosterIcon() {
