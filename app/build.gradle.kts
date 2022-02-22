@@ -103,6 +103,7 @@ dependencies {
     // Modules
     implementation(project(Modules.logging))
     implementation(project(Modules.uiComponents))
+    implementation(project(Modules.navigation))
 
     // Coroutines
     implementation (Libraries.coroutine)

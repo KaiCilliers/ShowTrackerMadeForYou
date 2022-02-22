@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_feature_my_list_movie"
+        android:icon="@drawable/search_24"
+        android:title="@string/menu_my_list_movie"/>
+
+    <item
+        android:id="@+id/nav_feature_my_list_tv_show"
+        android:icon="@drawable/close_24"
+        android:title="@string/menu_my_list_tv_show"/>
+
+    <item
+        android:id="@+id/nav_feature_discovery"
+        android:icon="@drawable/share_24"
+        android:title="@string/menu_my_list_tv_show"/>
+
+</menu>
