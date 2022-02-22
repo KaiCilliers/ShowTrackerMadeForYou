@@ -54,12 +54,8 @@ dependencies {
 
     implementation (Libraries.coroutine)
     implementation (Libraries.ThirdParty.ratingBar)
-    implementation ("com.github.MackHartley:RoundedProgressBar:2.1.1")
+    implementation (Libraries.ThirdParty.roundedProgressBar)
     implementation(Libraries.constraintLayout)
-    implementation ("com.google.android.material:material:1.6.0-alpha02")
-
-    // this dependency could be placed on the network module perhaps
-    // not used since, but gona keep here for now
-    implementation("com.google.android.exoplayer:exoplayer:2.16.1")
+    implementation (Libraries.material)
 
 }

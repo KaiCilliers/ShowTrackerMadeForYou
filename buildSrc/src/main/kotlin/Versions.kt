@@ -6,7 +6,7 @@ object Versions {
 
     // Design
     const val constraintLayoutVersion = "2.1.3"
-    const val materialVersion = "1.5.0"
+    const val materialVersion = "1.6.0-alpha02"
 
     // Test
     const val junitVersion = "4.13.2"
@@ -25,6 +25,7 @@ object Versions {
     // 3rd party libraries
     object ThirdParty {
         const val ratingBarVersion = "1.5.1"
-        const val roundedProgressBarVersion = "2.1.1'"
+        const val roundedProgressBarVersion = "2.1.1"
+        const val exoPlayerVersion = "2.16.1"
     }
 }

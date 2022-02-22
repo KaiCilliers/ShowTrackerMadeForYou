@@ -104,6 +104,7 @@ dependencies {
     implementation(project(Modules.logging))
     implementation(project(Modules.uiComponents))
 
+    // Coroutines
     implementation (Libraries.coroutine)
 
     // Test
