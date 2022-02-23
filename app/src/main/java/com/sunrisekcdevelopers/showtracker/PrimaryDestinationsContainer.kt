@@ -65,7 +65,7 @@ class PrimaryDestinationsContainer : Fragment(R.layout.primary_destination_fragm
      * Set what fragments to show when a tab is clicked
      */
     private fun setupBottomNav() {
-        binding.primaryFragmentBottomNav.apply {
+        binding.primaryFragmentContainerBottomNav.apply {
             setOnItemSelectedListener { item ->
                 return@setOnItemSelectedListener when (item.itemId) {
                     R.id.nav_feature_my_list_movie -> {
