@@ -5,4 +5,6 @@
     <string name="tag_my_list_movie">MyListMovie</string>
     <string name="tag_my_list_tv_show">MyListTVShow</string>
     <string name="tag_discovery">Discovery</string>
+    <string name="tag_secondary_one">SecondaryOne</string>
+    <string name="tag_secondary_two">SecondaryTwo</string>
 </resources>
