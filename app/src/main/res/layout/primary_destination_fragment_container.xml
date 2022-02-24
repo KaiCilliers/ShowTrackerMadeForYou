@@ -26,9 +26,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/search_24"
+            android:contentDescription="optional"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toStartOf="@id/primary_fragment_container_add"
-            tools:ignore="ContentDescription" />
+            tools:ignore="HardcodedText" />
 
         <ImageView
             android:id="@+id/primary_fragment_container_add"
