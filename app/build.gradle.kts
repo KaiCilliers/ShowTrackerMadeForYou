@@ -105,6 +105,10 @@ dependencies {
     implementation(project(Modules.logging))
     implementation(project(Modules.uiComponents))
     implementation(project(Modules.navigation))
+    // https://github.com/sanogueralorenzo/Android-Kotlin-Clean-Architecture/issues/120
+    implementation(project(Modules.Features.discovery))
+    implementation(project(Modules.Features.myCollectionMovie))
+    implementation(project(Modules.Features.myCollectionTVShow))
 
     // Coroutines
     implementation (Libraries.coroutine)

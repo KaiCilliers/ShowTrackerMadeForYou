@@ -3,10 +3,10 @@ package com.sunrisekcdevelopers.showtracker
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
+import com.sunrisekcdevelopers.discovery.DiscoveryFragmentModule
+import com.sunrisekcdevelopers.mycollectionmovie.MyCollectionMovieFragment
+import com.sunrisekcdevelopers.mycollectiontvshow.MyCollectionTVShowFragment
 import com.sunrisekcdevelopers.showtracker.databinding.PrimaryDestinationFragmentContainerBinding
-import com.sunrisekcdevelopers.showtracker.primary.MyListMovieFragment
-import com.sunrisekcdevelopers.showtracker.primary.DiscoveryFragment
-import com.sunrisekcdevelopers.showtracker.primary.MyListTVShowFragment
 import com.sunrisekcdevelopers.ui_components.viewbinding.viewBinding
 
 class PrimaryDestinationsContainer : Fragment(R.layout.primary_destination_fragment_container) {
@@ -14,14 +14,14 @@ class PrimaryDestinationsContainer : Fragment(R.layout.primary_destination_fragm
     private val binding: PrimaryDestinationFragmentContainerBinding by viewBinding(PrimaryDestinationFragmentContainerBinding::bind)
 
     // Here you place variables for each fragment in navhost destinations
-    private val myListMovieFragment: MyListMovieFragment by lazy { MyListMovieFragment() }
-    private val myListTVShowFragment: MyListTVShowFragment by lazy { MyListTVShowFragment() }
-    private val discoveryFragment: DiscoveryFragment by lazy { DiscoveryFragment() }
+    private val myCollectionMovieFragment: MyCollectionMovieFragment by lazy { MyCollectionMovieFragment() }
+    private val myCollectionTVShowFragment: MyCollectionTVShowFragment by lazy { MyCollectionTVShowFragment() }
+    private val discoveryFragment: DiscoveryFragmentModule by lazy { DiscoveryFragmentModule() }
 
     private val destinationList: Map<String, Fragment> by lazy {
         mapOf(
-            "MyListMovieFragment" to myListMovieFragment,
-            "MyListTVShowFragment" to myListTVShowFragment,
+            "MyCollectionMovieFragment" to myCollectionMovieFragment,
+            "MyCollectionTVShowFragment" to myCollectionTVShowFragment,
             START_DESTINATION to discoveryFragment
         )
     }
@@ -69,11 +69,11 @@ class PrimaryDestinationsContainer : Fragment(R.layout.primary_destination_fragm
             setOnItemSelectedListener { item ->
                 return@setOnItemSelectedListener when (item.itemId) {
                     R.id.nav_feature_my_list_movie -> {
-                        switchToTab(myListMovieFragment)
+                        switchToTab(myCollectionMovieFragment)
                         true
                     }
                     R.id.nav_feature_my_list_tv_show -> {
-                        switchToTab(myListTVShowFragment)
+                        switchToTab(myCollectionTVShowFragment)
                         true
                     }
                     R.id.nav_feature_discovery -> {
