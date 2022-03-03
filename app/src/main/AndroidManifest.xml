@@ -11,7 +11,8 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.ShowTracker.Light">
+        android:theme="@style/Theme.ShowTracker.Light"
+        android:name=".ShowTrackerApp">
         <activity android:name=".activities.DisplayActivity"/>
         <activity android:name=".activities.PrimaryActivity"/>
         <activity android:name=".activities.SecondaryActivity"/>

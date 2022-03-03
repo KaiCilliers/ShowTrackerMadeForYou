@@ -101,6 +101,9 @@ dependencies {
     implementation (Libraries.material)
     implementation (Libraries.constraintLayout)
 
+    // Dependency Injection
+    implementation (Libraries.koinAndroid)
+
     // Modules
     implementation(project(Modules.logging))
     implementation(project(Modules.uiComponents))
