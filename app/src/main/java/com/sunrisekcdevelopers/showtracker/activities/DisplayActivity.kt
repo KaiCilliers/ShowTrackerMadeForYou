@@ -1,11 +1,11 @@
-package com.sunrisekcdevelopers.showtracker
+package com.sunrisekcdevelopers.showtracker.activities
 
 import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.sunrisekcdevelopers.logging.timber
-import com.sunrisekcdevelopers.showtracker.databinding.ActivityMainBinding
+import com.sunrisekcdevelopers.showtracker.databinding.DisplayActivityBinding
 import com.sunrisekcdevelopers.ui_components.components.StBanner
 import com.sunrisekcdevelopers.ui_components.components.StPoster
 import com.sunrisekcdevelopers.ui_components.components.StProgressBar
@@ -15,9 +15,9 @@ import com.sunrisekcdevelopers.ui_components.viewbinding.viewBinding
 import kotlinx.coroutines.*
 import timber.log.Timber
 
-class MainActivity : AppCompatActivity() {
+class DisplayActivity : AppCompatActivity() {
     private val log by timber()
-    private val binding by viewBinding(ActivityMainBinding::inflate)
+    private val binding by viewBinding(DisplayActivityBinding::inflate)
 
     private var count = 0.0
 

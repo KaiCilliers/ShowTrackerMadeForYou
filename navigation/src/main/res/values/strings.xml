@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- used in to uniquely identify a layout using content description -->
+    <string name="my_collection_movie_fragment">my_collection_movie_fragment</string>
+    <string name="my_collection_tvshow_fragment">my_collection_tvshow_fragment</string>
+    <string name="discovery_fragment">discovery_fragment</string>
+</resources>

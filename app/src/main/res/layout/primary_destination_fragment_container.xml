@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/primary_fragment_container_heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top">
+
+        <!-- TODO use correct icons and enlarge them -->
+        <ImageView
+            android:id="@+id/primary_fragment_container_overflow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/share_24"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/primary_fragment_container_secondary_actions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/search_24"
+            android:contentDescription="optional"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/primary_fragment_container_add"
+            tools:ignore="HardcodedText" />
+
+        <ImageView
+            android:id="@+id/primary_fragment_container_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/add_24"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="ContentDescription" />
+
+        <!-- TODO extract string resource -->
+        <com.sunrisekcdevelopers.ui_components.StTextViewTitle
+            android:id="@+id/primary_fragment_container_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ShowTracker"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:ignore="HardcodedText" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/primary_fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:background="@drawable/background_placeholder_rectangle"
+        tools:backgroundTint="@color/light_grey"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/primary_fragment_container_bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:layout_behavior="com.google.android.material.behavior.HideBottomViewOnScrollBehavior"
+        app:menu="@menu/primary_bottom_nav_menu"
+        tools:layout_height="50dp"
+        tools:background="@drawable/background_placeholder_rectangle"
+        tools:backgroundTint="@color/dark_grey"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

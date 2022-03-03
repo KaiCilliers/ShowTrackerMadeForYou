@@ -3,6 +3,7 @@ package com.sunrisekcdevelopers.navigation
 import android.app.Activity
 import android.app.Service
 import android.content.BroadcastReceiver
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -52,5 +53,5 @@ internal object ClassRegistry {
 fun loadFragment(className: String, args: Bundle? = null): Fragment =
     ClassRegistry.loadFragmentOrThrow<Fragment>(className).newInstance().apply { arguments = args }
 
-fun loadIntent(className: String): Intent =
-    Intent(Intent.ACTION_VIEW).setClassName(BuildConfig.RootPackage, className)
+fun loadIntent(context: Context, className: String): Intent =
+    Intent(context, Class.forName(className))
