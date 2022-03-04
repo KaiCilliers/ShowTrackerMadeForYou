@@ -11,6 +11,7 @@ object GlobalDestinations {
     object Fragments {
         const val MovieDetail = "$ROOT_PACKAGE.moviedetail.MovieDetailFragment"
         const val EpisodeDetail = "$ROOT_PACKAGE.episodedetail.EpisodeDetailFragment"
+        const val TVShowDetail = "$ROOT_PACKAGE.tvshowdetail.TVShowDetailFragment"
     }
     object KEYS {
         const val SECONDARY_INITIAL_DESTINATION = "secondary_destiantion"
@@ -20,4 +21,5 @@ object GlobalDestinations {
 sealed interface SecondaryDestinations : Parcelable {
     @Parcelize object MovieDetail : SecondaryDestinations, Parcelable
     @Parcelize object EpisodeDetail : SecondaryDestinations, Parcelable
+    @Parcelize object TVShowDetail : SecondaryDestinations, Parcelable
 }

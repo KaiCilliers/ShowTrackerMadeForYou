@@ -4,9 +4,20 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/my_android_projects/ShowTrackerMadeforYou/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/my_android_projects/ShowTrackerMadeforYou/app/src/main/res/layout/discovery_fragment.xml" value="0.12407407407407407" />
+        <entry key="..\:/my_android_projects/ShowTrackerMadeforYou/app/src/main/res/layout/display_activity.xml" value="0.16742654508611957" />
+        <entry key="..\:/my_android_projects/ShowTrackerMadeforYou/app/src/main/res/layout/my_list_movies_fragment.xml" value="0.16767983789260385" />
+        <entry key="..\:/my_android_projects/ShowTrackerMadeforYou/app/src/main/res/layout/my_list_tv_show_fragment.xml" value="0.16767983789260385" />
         <entry key="..\:/my_android_projects/ShowTrackerMadeforYou/app/src/main/res/layout/st_expandable_text.xml" value="0.1" />
         <entry key="..\:/my_android_projects/ShowTrackerMadeforYou/app/src/main/res/layout/st_tag.xml" value="0.353713768115942" />
         <entry key="..\:/my_android_projects/ShowTrackerMadeforYou/app/src/main/res/layout/st_wrapped_tag_list.xml" value="0.25" />
+        <entry key="..\:/my_android_projects/ShowTrackerMadeforYou/discovery/src/main/res/layout/discovery_fragment_ext.xml" value="0.1838768115942029" />
+        <entry key="..\:/my_android_projects/ShowTrackerMadeforYou/episodeDetail/src/main/res/layout/episode_detail_fragment.xml" value="0.16767983789260385" />
+        <entry key="..\:/my_android_projects/ShowTrackerMadeforYou/features/discovery/src/main/res/layout/discovery_fragment.xml" value="0.12407407407407407" />
+        <entry key="..\:/my_android_projects/ShowTrackerMadeforYou/features/discovery/src/main/res/layout/tes.xml" value="0.12407407407407407" />
+        <entry key="..\:/my_android_projects/ShowTrackerMadeforYou/movieDetail/src/main/res/layout/movie_detail_fragment.xml" value="0.1" />
+        <entry key="..\:/my_android_projects/ShowTrackerMadeforYou/myCollectionMovie/src/main/res/layout/my_collection_movie_fragment.xml" value="0.16767983789260385" />
+        <entry key="..\:/my_android_projects/ShowTrackerMadeforYou/tvShowDetail/src/main/res/layout/tvshow_detail_fragment.xml" value="0.1" />
         <entry key="..\:/my_android_projects/ShowTrackerMadeforYou/ui-components/src/main/res/drawable/add_24.xml" value="0.1" />
         <entry key="..\:/my_android_projects/ShowTrackerMadeforYou/ui-components/src/main/res/drawable/check_24.xml" value="0.1" />
         <entry key="..\:/my_android_projects/ShowTrackerMadeforYou/ui-components/src/main/res/drawable/circle.xml" value="0.1" />

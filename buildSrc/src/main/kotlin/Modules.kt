@@ -11,5 +11,6 @@ object Modules {
         const val myCollectionTVShow = ":myCollectionTVShow"
         const val episodeDetail = ":episodeDetail"
         const val movieDetail = ":movieDetail"
+        const val tvShowDetail = ":tvShowDetail"
     }
 }

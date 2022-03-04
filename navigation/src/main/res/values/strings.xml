@@ -6,4 +6,5 @@
     <string name="discovery_fragment">discovery_fragment</string>
     <string name="episode_detail">episode_detail</string>
     <string name="movie_detail">movie_detail</string>
+    <string name="tvshow_detail">tvshow_detail</string>
 </resources>

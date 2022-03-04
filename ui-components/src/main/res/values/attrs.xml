@@ -7,6 +7,10 @@
         <attr name="strb_star_padding" format="integer"/>
     </declare-styleable>
 
+    <declare-styleable name="StWrappedTagList">
+        <attr name="stwlTitle" format="string"/>
+    </declare-styleable>
+
     <declare-styleable name="StExpandableText">
         <attr name="stet_startExpanded" format="boolean"/>
         <attr name="stet_maxLines" format="integer"/>

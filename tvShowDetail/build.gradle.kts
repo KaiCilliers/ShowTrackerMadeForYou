@@ -1,7 +1,6 @@
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
-    id("kotlin-parcelize")
 }
 
 android {
@@ -51,4 +50,5 @@ dependencies {
     implementation(project(Modules.uiComponents))
     implementation(project(Modules.navigation))
     implementation(project(Modules.imageLoading))
+
 }

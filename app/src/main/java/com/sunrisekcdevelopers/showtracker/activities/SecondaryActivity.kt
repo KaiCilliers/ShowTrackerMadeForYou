@@ -27,6 +27,9 @@ class SecondaryActivity : AppCompatActivity() {
                 SecondaryDestinations.MovieDetail -> loadFragment(GlobalDestinations.Fragments.MovieDetail).apply {
                     arguments = Bundle().apply { putInt("some", 1) }
                 }
+                SecondaryDestinations.TVShowDetail -> loadFragment(GlobalDestinations.Fragments.TVShowDetail).apply {
+                    arguments = Bundle().apply { putInt("some", 1) }
+                }
             }
             supportFragmentManager.beginTransaction()
                 .add(com.sunrisekcdevelopers.navigation.R.id.root_container, frag)

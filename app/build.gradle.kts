@@ -112,6 +112,9 @@ dependencies {
     implementation(project(Modules.Features.discovery))
     implementation(project(Modules.Features.myCollectionMovie))
     implementation(project(Modules.Features.myCollectionTVShow))
+    implementation(project(Modules.Features.movieDetail))
+    implementation(project(Modules.Features.episodeDetail))
+    implementation(project(Modules.Features.tvShowDetail))
 
     // Coroutines
     implementation (Libraries.coroutine)
