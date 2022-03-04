@@ -9,5 +9,7 @@ object Modules {
         const val discovery = ":discovery"
         const val myCollectionMovie = ":myCollectionMovie"
         const val myCollectionTVShow = ":myCollectionTVShow"
+        const val episodeDetail = ":episodeDetail"
+        const val movieDetail = ":movieDetail"
     }
 }

@@ -16,9 +16,6 @@ android {
     }
 
     buildTypes {
-        debug {
-            buildConfigField("String", "RootPackage", "\"com.sunrisekcdeveloper.showtracker\"")
-        }
         release {
             isMinifyEnabled = false
             proguardFiles(
@@ -34,6 +31,9 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    viewBinding {
+        isEnabled = true
+    }
 }
 
 dependencies {
@@ -41,4 +41,12 @@ dependencies {
     implementation (Libraries.coreKtx)
     implementation (Libraries.appCompat)
 
+    // Design
+    implementation (Libraries.material)
+    implementation (Libraries.constraintLayout)
+
+    // Modules
+    implementation(project(Modules.logging))
+    implementation(project(Modules.uiComponents))
+    implementation(project(Modules.navigation))
 }
