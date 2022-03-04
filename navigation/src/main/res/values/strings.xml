@@ -4,4 +4,6 @@
     <string name="my_collection_movie_fragment">my_collection_movie_fragment</string>
     <string name="my_collection_tvshow_fragment">my_collection_tvshow_fragment</string>
     <string name="discovery_fragment">discovery_fragment</string>
+    <string name="episode_detail">episode_detail</string>
+    <string name="movie_detail">movie_detail</string>
 </resources>

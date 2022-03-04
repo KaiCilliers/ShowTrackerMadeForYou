@@ -6,6 +6,7 @@ import android.view.View
 import androidx.fragment.app.Fragment
 import com.sunrisekcdevelopers.mycollectionmovie.databinding.MyCollectionMovieFragmentBinding
 import com.sunrisekcdevelopers.navigation.GlobalDestinations
+import com.sunrisekcdevelopers.navigation.SecondaryDestinations
 import com.sunrisekcdevelopers.navigation.loadIntent
 import com.sunrisekcdevelopers.ui_components.viewbinding.viewBinding
 
@@ -16,7 +17,9 @@ class MyCollectionMovieFragment : Fragment(R.layout.my_collection_movie_fragment
         super.onViewCreated(view, savedInstanceState)
         binding.tvMyListMovieLabel.setOnClickListener {
             // https://stackoverflow.com/questions/14850212/intent-and-start-activity-from-string
-            startActivity(loadIntent(requireContext(), GlobalDestinations.Activities.SecondaryActivity))
+            startActivity(loadIntent(requireContext(), GlobalDestinations.Activities.SecondaryActivity).apply {
+                putExtra(GlobalDestinations.KEYS.SECONDARY_INITIAL_DESTINATION, SecondaryDestinations.MovieDetail)
+            })
         }
     }
 }
