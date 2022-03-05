@@ -1,4 +1,4 @@
-package com.sunrisekcdevelopers.showtracker.activities
+package com.sunrisekcdevelopers.showtracker
 
 import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
@@ -15,6 +15,9 @@ import com.sunrisekcdevelopers.ui_components.viewbinding.viewBinding
 import kotlinx.coroutines.*
 import timber.log.Timber
 
+/**
+ * Showcase all custom components used in the app
+ */
 class DisplayActivity : AppCompatActivity() {
     private val log by timber()
     private val binding by viewBinding(DisplayActivityBinding::inflate)

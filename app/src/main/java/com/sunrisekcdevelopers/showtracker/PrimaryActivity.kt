@@ -1,4 +1,4 @@
-package com.sunrisekcdevelopers.showtracker.activities
+package com.sunrisekcdevelopers.showtracker
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -6,6 +6,11 @@ import com.sunrisekcdevelopers.showtracker.PrimaryDestinationsContainer
 import com.sunrisekcdevelopers.showtracker.databinding.PrimaryActivityBinding
 import com.sunrisekcdevelopers.ui_components.viewbinding.viewBinding
 
+/**
+ * Houses the primary destinations of the app
+ * Primary destinations include all bottom nav bar destinations
+ * Provides a uniform format for all navigation destinations
+ */
 class PrimaryActivity : AppCompatActivity() {
 
     private val binding: PrimaryActivityBinding by viewBinding(PrimaryActivityBinding::inflate)

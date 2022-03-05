@@ -1,6 +1,5 @@
 package com.sunrisekcdevelopers.tvshowdetail
 
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
@@ -32,24 +31,3 @@ class TVShowDetailViewModel : ViewModel(), TVShowDetailViewModelContract {
     }
 }
 
-data class TVShowDetailUiModel(
-    val id: Int,
-    val coreDetails: TVShowCoreDetails,
-    val banner: BannerUi?,
-    val overview: String,
-    val genres: List<String>,
-    val languages: List<String>,
-    val tagline: String,
-    val backdropPath: String
-)
-
-data class TVShowCoreDetails(
-    val title: String,
-    val posterPath: String,
-    val releaseYear: String,
-    val director: String,
-    val rating: Float,
-    val status: String
-)
-
-data class BannerUi(val message: String)

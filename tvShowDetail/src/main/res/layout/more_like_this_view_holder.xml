@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sunrisekcdevelopers.ui_components.components.StPoster
+    xmlns:andtroid="http://schemas.android.com/apk/res/android"
+    andtroid:id="@+id/more_like_this_view_holder_poster"
+    andtroid:layout_width="wrap_content"
+    andtroid:layout_height="wrap_content"
+    andtroid:padding="4dp"/>
