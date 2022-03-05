@@ -4,7 +4,7 @@ import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.sunrisekcdevelopers.common.cast.TabCastFragment
 import com.sunrisekcdevelopers.common.morelikethis.TabMoreLikeThisFragment
-import com.sunrisekcdevelopers.tvshowdetail.season.TabSeasonsAdapter
+import com.sunrisekcdevelopers.tvshowdetail.season.TabSeasonsFragment
 
 /**
  * Adapter for ViewPager at the bottom of layout
@@ -22,7 +22,7 @@ class TVShowBottomViewPagerAdapter(
 
     override fun createFragment(position: Int): Fragment {
         return when (position) {
-            0 -> TabSeasonsAdapter()
+            0 -> TabSeasonsFragment()
             1 -> TabMoreLikeThisFragment()
             else -> TabCastFragment()
         }

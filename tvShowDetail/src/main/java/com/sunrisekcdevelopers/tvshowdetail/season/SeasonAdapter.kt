@@ -37,7 +37,7 @@ class SeasonAdapter : ListAdapter<Int, SeasonAdapter.SeasonViewHolder>(COMPARATO
                 setTitle("aldkjasdjakldasdjalkd")
                 setMaxValue(55.0)
                 setProgress(44.0)
-                setPosterImage("https://i.guim.co.uk/img/media/fe1e34da640c5c56ed16f76ce6f994fa9343d09d/0_174_3408_2046/master/3408.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=67773a9d419786091c958b2ad08eae5e")
+                setPosterImage("https://image.tmdb.org/t/p/w500/gNbdjDi1HamTCrfvM9JeA94bNi2.jpg")
                 setBannerMessage("banner")
                 showBanner()
             }

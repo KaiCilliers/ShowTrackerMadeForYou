@@ -12,7 +12,7 @@ import com.sunrisekcdevelopers.ui_components.viewbinding.viewBinding
  * Display a list of all seasons associated with tv show
  * Used in conjunction with ViewPager
  */
-class TabSeasonsAdapter : Fragment(R.layout.tab_list_container) {
+class TabSeasonsFragment : Fragment(R.layout.tab_list_container) {
 
     private val binding: TabListContainerBinding by viewBinding(TabListContainerBinding::bind)
     private val adapter: SeasonAdapter by lazy { SeasonAdapter() }

@@ -16,6 +16,7 @@ object GlobalDestinations {
         const val MovieDetail = "$ROOT_PACKAGE.moviedetail.MovieDetailFragment"
         const val EpisodeDetail = "$ROOT_PACKAGE.episodedetail.EpisodeDetailBottomSheet"
         const val TVShowDetail = "$ROOT_PACKAGE.tvshowdetail.TVShowDetailFragment"
+        const val PersonDetail = "$ROOT_PACKAGE.persondetail.PersonDetailFragment"
     }
     object KEYS {
         const val SECONDARY_INITIAL_DESTINATION = "secondary_destiantion"

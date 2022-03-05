@@ -21,7 +21,6 @@ class CastAdapter : ListAdapter<Int, CastViewHolder>(COMPARATOR){
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CastViewHolder{
-
         return CastViewHolder.from(parent)
     }
     override fun onBindViewHolder(holder: CastViewHolder, position: Int) {

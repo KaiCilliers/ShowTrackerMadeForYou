@@ -11,7 +11,9 @@ import com.google.android.material.tabs.TabLayoutMediator
 import com.sunrisekcdevelopers.common.R as commonR
 import com.sunrisekcdevelopers.imageloading.StandardGlideImage
 import com.sunrisekcdevelopers.navigation.GlobalDestinations
+import com.sunrisekcdevelopers.navigation.TransactionAnimations
 import com.sunrisekcdevelopers.navigation.loadFragment
+import com.sunrisekcdevelopers.navigation.replaceFragmentExt
 import com.sunrisekcdevelopers.tvshowdetail.databinding.TvshowDetailFragmentBinding
 import com.sunrisekcdevelopers.ui_components.components.StBanner
 import com.sunrisekcdevelopers.ui_components.components.st_media_core_details.MediaQuickSummary
@@ -67,6 +69,13 @@ class TVShowDetailFragment : Fragment(R.layout.tvshow_detail_fragment) {
                 tvTvshowDetailTitle.setOnClickListener {
                     (loadFragment(GlobalDestinations.Fragments.EpisodeDetail) as BottomSheetDialogFragment).show(childFragmentManager
                         , null)
+                }
+                tvshowDetailTagline.setOnClickListener {
+                    replaceFragmentExt(
+                        newFragment = loadFragment(GlobalDestinations.Fragments.PersonDetail),
+                        addToBackStack = true,
+                        transactionAnimations = TransactionAnimations.RIGHT_TO_LEFT
+                    )
                 }
             }
         }
