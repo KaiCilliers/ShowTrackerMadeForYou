@@ -39,8 +39,6 @@ dependencies {
     // Core
     implementation (Libraries.coreKtx)
     implementation (Libraries.appCompat)
-    implementation (Libraries.fragmentKtx)
-    implementation(Libraries.viewpager2)
 
     // Design
     implementation (Libraries.material)
@@ -49,8 +47,4 @@ dependencies {
     // Modules
     implementation(project(Modules.logging))
     implementation(project(Modules.uiComponents))
-    implementation(project(Modules.navigation))
-    implementation(project(Modules.imageLoading))
-    implementation(project(Modules.common))
-
 }

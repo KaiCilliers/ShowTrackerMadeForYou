@@ -4,18 +4,17 @@ import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.sunrisekcdevelopers.tvshowdetail.cast.CastAdapter
-import com.sunrisekcdevelopers.tvshowdetail.R
-import com.sunrisekcdevelopers.tvshowdetail.databinding.TabContainerBinding
+import com.sunrisekcdevelopers.ui_components.R
+import com.sunrisekcdevelopers.ui_components.databinding.TabListContainerBinding
 import com.sunrisekcdevelopers.ui_components.viewbinding.viewBinding
 
 /**
  * Display a list of all seasons associated with tv show
  * Used in conjunction with ViewPager
  */
-class TabSeasonsAdapter : Fragment(R.layout.tab_container) {
+class TabSeasonsAdapter : Fragment(R.layout.tab_list_container) {
 
-    private val binding: TabContainerBinding by viewBinding(TabContainerBinding::bind)
+    private val binding: TabListContainerBinding by viewBinding(TabListContainerBinding::bind)
     private val adapter: SeasonAdapter by lazy { SeasonAdapter() }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

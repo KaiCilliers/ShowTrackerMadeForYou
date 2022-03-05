@@ -1,13 +1,13 @@
-package com.sunrisekcdevelopers.tvshowdetail.cast
+package com.sunrisekcdevelopers.common.cast
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.sunrisekcdevelopers.tvshowdetail.cast.CastAdapter.CastViewHolder
-import com.sunrisekcdevelopers.tvshowdetail.databinding.CastViewHolderBinding
+import com.sunrisekcdevelopers.common.cast.CastAdapter.CastViewHolder
 import com.sunrisekcdevelopers.ui_components.components.StPoster
+import com.sunrisekcdevelopers.ui_components.databinding.ViewholderCastBinding
 
 /**
  * Adapter to display cast members of a movie or tv show
@@ -29,11 +29,11 @@ class CastAdapter : ListAdapter<Int, CastViewHolder>(COMPARATOR){
     }
 
     class CastViewHolder private constructor(
-        private val binding: CastViewHolderBinding
+        private val binding: ViewholderCastBinding
     ) : RecyclerView.ViewHolder(binding.root) {
         companion object {
             fun from(parent: ViewGroup): CastViewHolder = CastViewHolder(
-                CastViewHolderBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+                ViewholderCastBinding.inflate(LayoutInflater.from(parent.context), parent, false)
             )
         }
         @Suppress("UNUSED_PARAMETER")

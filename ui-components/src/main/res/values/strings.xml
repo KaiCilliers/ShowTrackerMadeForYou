@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="content_desc_media_poster">Poster image of movie or show.</string>
+    <string name="tab_cast_fragment">tab_list_fragment</string>
 </resources>

@@ -6,6 +6,8 @@ import android.view.View
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import com.google.android.material.tabs.TabLayoutMediator
+import com.sunrisekcdevelopers.common.R as commonR
 import com.sunrisekcdevelopers.imageloading.StandardGlideImage
 import com.sunrisekcdevelopers.moviedetail.databinding.MovieDetailFragmentBinding
 import com.sunrisekcdevelopers.navigation.GlobalDestinations
@@ -22,6 +24,7 @@ class MovieDetailFragment : Fragment(R.layout.movie_detail_fragment) {
     private val binding: MovieDetailFragmentBinding by viewBinding(MovieDetailFragmentBinding::bind)
     // needs koin injection
     private val viewModel: MovieDetailViewModelContract by viewModels<MovieDetailViewModel>()
+    private val bottomTabHeadings: MutableList<String> = mutableListOf()
 
     // todo reference fragment's activity to set additional actions
     @SuppressLint("SetTextI18n")
@@ -34,7 +37,6 @@ class MovieDetailFragment : Fragment(R.layout.movie_detail_fragment) {
                 transactionAnimations = TransactionAnimations.RIGHT_TO_LEFT
             )
         }
-        return null ?:
         // todo determine which lifecycleowner to pass here
         viewModel.exampleState.observe(viewLifecycleOwner) {
             binding.apply {
@@ -69,6 +71,16 @@ class MovieDetailFragment : Fragment(R.layout.movie_detail_fragment) {
                     )
             }
         }
+
+        val adapter = MovieBottomViewPagerAdapter(this)
+        binding.movieDetailBottomContainer.adapter = adapter
+        bottomTabHeadings.addAll(arrayOf(
+            getString(commonR.string.tab_heading_more_like_this),
+            getString(commonR.string.tab_heading_cast)
+        ))
+        TabLayoutMediator(binding.movieDetailBottomTabs, binding.movieDetailBottomContainer) { tab, position ->
+            tab.text = bottomTabHeadings[position]
+        }.attach()
     }
 
 }

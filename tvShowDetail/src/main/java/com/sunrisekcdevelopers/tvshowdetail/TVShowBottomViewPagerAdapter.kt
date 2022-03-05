@@ -2,15 +2,15 @@ package com.sunrisekcdevelopers.tvshowdetail
 
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.sunrisekcdevelopers.tvshowdetail.cast.TabCastFragment
-import com.sunrisekcdevelopers.tvshowdetail.morelikethis.TabMoreLikeThisFragment
+import com.sunrisekcdevelopers.common.cast.TabCastFragment
+import com.sunrisekcdevelopers.common.morelikethis.TabMoreLikeThisFragment
 import com.sunrisekcdevelopers.tvshowdetail.season.TabSeasonsAdapter
 
 /**
  * Adapter for ViewPager at the bottom of layout
  * Used together with a TabLayout
  */
-class BottomViewPagerAdapter(
+class TVShowBottomViewPagerAdapter(
     fragment: Fragment
 ) : FragmentStateAdapter(fragment) {
 

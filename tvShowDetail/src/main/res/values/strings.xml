@@ -1,6 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="tab_heading_seasons">Seasons</string>
-    <string name="tab_heading_more_like_this">More Like This</string>
-    <string name="tab_heading_cast">Cast</string>
-</resources>
+<resources/>

@@ -7,6 +7,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.google.android.material.tabs.TabLayoutMediator
+import com.sunrisekcdevelopers.common.R as commonR
 import com.sunrisekcdevelopers.imageloading.StandardGlideImage
 import com.sunrisekcdevelopers.tvshowdetail.databinding.TvshowDetailFragmentBinding
 import com.sunrisekcdevelopers.ui_components.components.StBanner
@@ -62,12 +63,12 @@ class TVShowDetailFragment : Fragment(R.layout.tvshow_detail_fragment) {
                     )
             }
         }
-        val adapter = BottomViewPagerAdapter(this)
+        val adapter = TVShowBottomViewPagerAdapter(this)
         binding.tvshowDetailBottomContainer.adapter = adapter
         bottomTabHeadings.addAll(arrayOf(
-            getString(R.string.tab_heading_seasons),
-            getString(R.string.tab_heading_more_like_this),
-            getString(R.string.tab_heading_cast)
+            getString(commonR.string.tab_heading_seasons),
+            getString(commonR.string.tab_heading_more_like_this),
+            getString(commonR.string.tab_heading_cast)
         ))
         TabLayoutMediator(binding.tvshowDetailBottomTabs, binding.tvshowDetailBottomContainer) { tab, position ->
             tab.text = bottomTabHeadings[position]

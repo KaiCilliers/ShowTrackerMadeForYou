@@ -1,4 +1,4 @@
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -63,7 +63,7 @@
             android:layout_height="wrap_content"
             app:stwlTitle="@string/heading_languages"/>
 
-        <LinearLayout
+        <androidx.appcompat.widget.LinearLayoutCompat
             android:id="@+id/movie_detail_container_actions"
             android:orientation="horizontal"
             android:layout_width="match_parent"
@@ -93,7 +93,23 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
 
-        </LinearLayout>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/movie_detail_bottom_tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabMode="fixed"
+            app:tabIndicatorAnimationMode="linear"
+            app:tabIndicatorColor="#EF0C4C"
+            app:tabIndicatorFullWidth="true"
+            app:tabIndicatorHeight="2dp"
+            app:tabSelectedTextColor="#EF0C4C"/>
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/movie_detail_bottom_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
 
     </androidx.appcompat.widget.LinearLayoutCompat>
-</ScrollView>
+</androidx.core.widget.NestedScrollView>

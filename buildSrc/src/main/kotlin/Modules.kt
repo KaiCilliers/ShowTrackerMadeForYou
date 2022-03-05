@@ -5,6 +5,7 @@ object Modules {
     const val styles = ":styles"
     const val navigation = ":navigation"
     const val imageLoading = ":imageloading"
+    const val common = ":common"
     object Features {
         const val discovery = ":discovery"
         const val myCollectionMovie = ":myCollectionMovie"

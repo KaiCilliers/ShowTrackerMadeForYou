@@ -1,14 +1,14 @@
-package com.sunrisekcdevelopers.tvshowdetail.morelikethis
+package com.sunrisekcdevelopers.common.morelikethis
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.sunrisekcdevelopers.tvshowdetail.R
-import com.sunrisekcdevelopers.tvshowdetail.morelikethis.MoreLikeThisAdapter.MoreLikeThisViewHolder
-import com.sunrisekcdevelopers.tvshowdetail.databinding.MoreLikeThisViewHolderBinding
+import com.sunrisekcdevelopers.common.morelikethis.MoreLikeThisAdapter.MoreLikeThisViewHolder
+import com.sunrisekcdevelopers.ui_components.R
 import com.sunrisekcdevelopers.ui_components.components.StPoster
+import com.sunrisekcdevelopers.ui_components.databinding.ViewholderMoreLikeThisBinding
 
 /**
  * Adapter to display media similar to the current movie or tv show details are being displayed
@@ -25,11 +25,11 @@ class MoreLikeThisAdapter : ListAdapter<Int, MoreLikeThisViewHolder>(COMPARATOR)
     override fun onBindViewHolder(holder: MoreLikeThisViewHolder, position: Int) = holder.bind(getItem(position))
 
     class MoreLikeThisViewHolder private constructor(
-        private val binding: MoreLikeThisViewHolderBinding
+        private val binding: ViewholderMoreLikeThisBinding
     ) : RecyclerView.ViewHolder(binding.root) {
         companion object {
             fun from(parent: ViewGroup): MoreLikeThisViewHolder = MoreLikeThisViewHolder(
-                MoreLikeThisViewHolderBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+                ViewholderMoreLikeThisBinding.inflate(LayoutInflater.from(parent.context), parent, false)
             )
         }
         @Suppress("UNUSED_PARAMETER")
