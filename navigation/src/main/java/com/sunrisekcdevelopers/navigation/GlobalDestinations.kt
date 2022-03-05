@@ -14,7 +14,7 @@ object GlobalDestinations {
     }
     object Fragments {
         const val MovieDetail = "$ROOT_PACKAGE.moviedetail.MovieDetailFragment"
-        const val EpisodeDetail = "$ROOT_PACKAGE.episodedetail.EpisodeDetailFragment"
+        const val EpisodeDetail = "$ROOT_PACKAGE.episodedetail.EpisodeDetailBottomSheet"
         const val TVShowDetail = "$ROOT_PACKAGE.tvshowdetail.TVShowDetailFragment"
     }
     object KEYS {

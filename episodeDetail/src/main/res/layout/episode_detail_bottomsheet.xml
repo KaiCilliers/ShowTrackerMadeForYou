@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:contentDescription="@string/episode_detail">
+
+    <ImageView
+        android:id="@+id/episode_detail_backdrop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <com.sunrisekcdevelopers.ui_components.StTextViewTitle
+        android:id="@+id/episode_detail_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/episode_detail_backdrop"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Episode Title"/>
+
+    <com.sunrisekcdevelopers.ui_components.StTextViewBody
+        android:id="@+id/episode_detail_current_season_episode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/episode_detail_title"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="S04E02"/>
+
+    <ImageView
+        android:id="@+id/episode_detail_action_watch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/eye_24"
+        app:layout_constraintTop_toTopOf="@id/episode_detail_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/episode_detail_current_season_episode"
+        tools:ignore="ContentDescription" />
+
+    <com.sunrisekcdevelopers.ui_components.components.StBanner
+        android:id="@+id/episode_detail_banner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/episode_detail_current_season_episode"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.sunrisekcdevelopers.ui_components.components.StExpandableText
+        android:id="@+id/episode_detail_overview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/episode_detail_banner"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
