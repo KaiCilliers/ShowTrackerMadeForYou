@@ -6,8 +6,10 @@ import android.view.View
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import com.google.android.material.tabs.TabLayoutMediator
 import com.sunrisekcdevelopers.imageloading.StandardGlideImage
 import com.sunrisekcdevelopers.tvshowdetail.databinding.TvshowDetailFragmentBinding
+import com.sunrisekcdevelopers.tvshowdetail.viewpager.BottomViewPagerAdapter
 import com.sunrisekcdevelopers.ui_components.components.StBanner
 import com.sunrisekcdevelopers.ui_components.components.st_media_core_details.MediaQuickSummary
 import com.sunrisekcdevelopers.ui_components.components.st_media_core_details.TVShowStatus
@@ -18,6 +20,7 @@ class TVShowDetailFragment : Fragment(R.layout.tvshow_detail_fragment) {
 
     private val binding: TvshowDetailFragmentBinding by viewBinding(TvshowDetailFragmentBinding::bind)
     private val viewModel: TVShowDetailViewModelContract by viewModels<TVShowDetailViewModel>()
+    private val bottomTabHeadings: MutableList<String> = mutableListOf()
 
     @SuppressLint("SetTextI18n")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -57,6 +60,16 @@ class TVShowDetailFragment : Fragment(R.layout.tvshow_detail_fragment) {
                     )
             }
         }
+        val adapter = BottomViewPagerAdapter(this)
+        binding.tvshowDetailBottomContainer.adapter = adapter
+        bottomTabHeadings.addAll(arrayOf(
+            getString(R.string.tab_heading_episodes),
+            getString(R.string.tab_heading_more_like_this),
+            getString(R.string.tab_heading_cast)
+        ))
+        TabLayoutMediator(binding.tvshowDetailBottomTabs, binding.tvshowDetailBottomContainer) { tab, position ->
+            tab.text = bottomTabHeadings[position]
+        }.attach()
     }
 
 }

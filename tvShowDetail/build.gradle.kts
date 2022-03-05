@@ -39,7 +39,8 @@ dependencies {
     // Core
     implementation (Libraries.coreKtx)
     implementation (Libraries.appCompat)
-    implementation ("androidx.fragment:fragment-ktx:1.4.1")
+    implementation (Libraries.fragmentKtx)
+    implementation(Libraries.viewpager2)
 
     // Design
     implementation (Libraries.material)
