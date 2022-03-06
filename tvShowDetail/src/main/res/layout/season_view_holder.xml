@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sunrisekcdevelopers.ui_components.components.StSeasonProgress
+    anroid:id="@+id/season_view_holder_season_progress"
+    xmlns:anroid="http://schemas.android.com/apk/res/android"
+    anroid:layout_width="match_parent"
+    anroid:layout_height="wrap_content"/>

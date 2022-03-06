@@ -3,6 +3,7 @@ object Libraries {
     const val coreKtx = "androidx.core:core-ktx:${Versions.coreKtxVersion}"
     const val appCompat = "androidx.appcompat:appcompat:${Versions.appCompatVersion}"
     const val kotlinStandardLib = "org.jetbrains.kotlin:kotlin-stdlib:${Versions.kotlinStandardLibVersion}"
+    const val fragmentKtx = "androidx.fragment:fragment-ktx:${Versions.fragmentKtxVersion}"
 
     // Design
     const val constraintLayout = "androidx.constraintlayout:constraintlayout:${Versions.constraintLayoutVersion}"
@@ -22,6 +23,9 @@ object Libraries {
     const val koinTest = "io.insert-koin:koin-test:${Versions.koinVersion}"
     const val koinJunit4 = "io.insert-koin:koin-test-junit4:${Versions.koinVersion}"
     const val koinJunit5 = "io.insert-koin:koin-test-junit5:${Versions.koinVersion}"
+
+    // Viewpager2
+    const val viewpager2 = "androidx.viewpager2:viewpager2:${Versions.viewpager2Version}"
 
     // Coroutines
     const val coroutine = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.coroutineVersion}"

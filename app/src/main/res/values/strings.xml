@@ -2,6 +2,7 @@
     <string name="app_name">ShowTracker - Made for You</string>
     <string name="menu_my_list_movie">MyList Movie</string>
     <string name="menu_my_list_tv_show">MyList TVShow</string>
+    <string name="menu_discovery">Discovery</string>
     <string name="tag_my_list_movie">MyListMovie</string>
     <string name="tag_my_list_tv_show">MyListTVShow</string>
     <string name="tag_discovery">Discovery</string>

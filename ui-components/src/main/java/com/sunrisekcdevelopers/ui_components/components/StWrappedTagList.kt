@@ -1,5 +1,6 @@
 package com.sunrisekcdevelopers.ui_components.components
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
@@ -7,8 +8,11 @@ import android.widget.LinearLayout
 import androidx.annotation.AttrRes
 import androidx.annotation.StyleRes
 import com.google.android.material.chip.Chip
+import com.sunrisekcdevelopers.ui_components.R
 import com.sunrisekcdevelopers.ui_components.databinding.StWrappedTagListBinding
+import com.sunrisekcdevelopers.ui_components.withRecycle
 
+@SuppressLint("Recycle")
 class StWrappedTagList @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
@@ -20,6 +24,9 @@ class StWrappedTagList @JvmOverloads constructor(
 
     init {
         orientation = VERTICAL
+        context.obtainStyledAttributes(attrs, R.styleable.StWrappedTagList).withRecycle {
+            getString(R.styleable.StWrappedTagList_stwlTitle)?.also { binding.stWrappedTagListTitle.text = it }
+        }
     }
 
     fun setTitle(title: String) {

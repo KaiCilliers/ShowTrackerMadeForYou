@@ -13,12 +13,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ShowTracker.Light"
         android:name=".ShowTrackerApp">
-        <activity android:name=".activities.DisplayActivity"/>
-        <activity android:name=".activities.PrimaryActivity"/>
-        <activity android:name=".activities.SecondaryActivity"/>
+        <activity android:name=".DisplayActivity"/>
+        <activity android:name=".PrimaryActivity"/>
+        <activity android:name=".SecondaryActivity"/>
         <activity-alias
             android:name=".LaunchActivity"
-            android:targetActivity=".activities.PrimaryActivity"
+            android:targetActivity=".PrimaryActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

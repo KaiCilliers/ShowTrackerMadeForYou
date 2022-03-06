@@ -85,6 +85,7 @@ class StPoster @JvmOverloads constructor(
         cropType = type
         cropImage()
     }
+    // todo needs to be renamed and remove suspend version
     fun setCropTypeV2(type: CropType) {
         cropType = type
         cropImage()
@@ -114,6 +115,84 @@ class StPoster @JvmOverloads constructor(
     suspend fun setIconPlacement(location: IconPlacement) {
         iconPlacement = location
         moveActionIcon()
+    }
+
+    fun setIconPlacementV2(location: IconPlacement) {
+        iconPlacement = location
+        moveActionIconV2()
+    }
+
+    private fun moveActionIconV2() {
+        val set = ConstraintSet()
+        set.clone(binding.root as ConstraintLayout)
+        set.clear(binding.stPosterActionIcon.id, ConstraintSet.TOP)
+        set.clear(binding.stPosterActionIcon.id, ConstraintSet.BOTTOM)
+        set.clear(binding.stPosterActionIcon.id, ConstraintSet.START)
+        set.clear(binding.stPosterActionIcon.id, ConstraintSet.END)
+
+        when (iconPlacement) {
+            IconPlacement.BottomLeft -> {
+                set.connect(
+                    binding.stPosterActionIcon.id,
+                    ConstraintSet.BOTTOM,
+                    binding.stPosterImage.id,
+                    ConstraintSet.BOTTOM
+                )
+                set.connect(
+                    binding.stPosterActionIcon.id,
+                    ConstraintSet.START,
+                    binding.stPosterImage.id,
+                    ConstraintSet.START
+                )
+            }
+            IconPlacement.BottomRight -> {
+                set.connect(
+                    binding.stPosterActionIcon.id,
+                    ConstraintSet.BOTTOM,
+                    binding.stPosterImage.id,
+                    ConstraintSet.BOTTOM
+                )
+                set.connect(
+                    binding.stPosterActionIcon.id,
+                    ConstraintSet.END,
+                    binding.stPosterImage.id,
+                    ConstraintSet.END
+                )
+            }
+            IconPlacement.TopLeft -> {
+                set.connect(
+                    binding.stPosterActionIcon.id,
+                    ConstraintSet.TOP,
+                    binding.stPosterImage.id,
+                    ConstraintSet.TOP
+                )
+                set.connect(
+                    binding.stPosterActionIcon.id,
+                    ConstraintSet.START,
+                    binding.stPosterImage.id,
+                    ConstraintSet.START
+                )
+            }
+            IconPlacement.TopRight -> {
+                set.connect(
+                    binding.stPosterActionIcon.id,
+                    ConstraintSet.TOP,
+                    binding.stPosterImage.id,
+                    ConstraintSet.TOP
+                )
+                set.connect(
+                    binding.stPosterActionIcon.id,
+                    ConstraintSet.END,
+                    binding.stPosterImage.id,
+                    ConstraintSet.END
+                )
+            }
+        }
+
+        // simple one liner to animate moving the drawable icon
+        TransitionManager.beginDelayedTransition(binding.root as ConstraintLayout)
+
+        set.applyTo(binding.root as ConstraintLayout)
     }
 
     @Suppress("RedundantSuspendModifier")

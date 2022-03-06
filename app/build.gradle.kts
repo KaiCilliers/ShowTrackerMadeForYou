@@ -4,7 +4,6 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
     id ("com.android.application")
     id ("org.jetbrains.kotlin.android")
-    id ("kotlin-android-extensions")
 }
 
 android {
@@ -112,6 +111,12 @@ dependencies {
     implementation(project(Modules.Features.discovery))
     implementation(project(Modules.Features.myCollectionMovie))
     implementation(project(Modules.Features.myCollectionTVShow))
+    implementation(project(Modules.Features.movieDetail))
+    implementation(project(Modules.Features.episodeDetail))
+    implementation(project(Modules.Features.tvShowDetail))
+    implementation(project(Modules.Features.personDetail))
+    implementation(project(Modules.Features.seasonDetail))
+    implementation(project(Modules.Features.about))
 
     // Coroutines
     implementation (Libraries.coroutine)

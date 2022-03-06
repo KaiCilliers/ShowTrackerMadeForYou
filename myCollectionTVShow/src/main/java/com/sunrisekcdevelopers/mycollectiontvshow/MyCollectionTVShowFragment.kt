@@ -18,7 +18,7 @@ class MyCollectionTVShowFragment : Fragment(R.layout.my_collection_tvshow_fragme
         binding.tvMyListTvShowLabel.setOnClickListener {
             // https://stackoverflow.com/questions/14850212/intent-and-start-activity-from-string
             startActivity(loadIntent(requireContext(), GlobalDestinations.Activities.SecondaryActivity).apply {
-                putExtra(GlobalDestinations.KEYS.SECONDARY_INITIAL_DESTINATION, SecondaryDestinations.EpisodeDetail)
+                putExtra(GlobalDestinations.KEYS.SECONDARY_INITIAL_DESTINATION, SecondaryDestinations.TVShowDetail)
             })
         }
     }

@@ -1,19 +1,115 @@
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:contentDescription="@string/movie_detail">
+    android:layout_height="match_parent">
 
-    <com.sunrisekcdevelopers.ui_components.StTextViewTitle
-        android:id="@+id/tv_discovery_label"
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Movie Detail EXT"
-        android:gravity="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="HardcodedText" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:orientation="vertical"
+        android:contentDescription="@string/movie_detail">
+
+        <com.sunrisekcdevelopers.ui_components.StTextViewTitle
+            android:id="@+id/tv_discovery_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Movie Detail EXT"
+            android:gravity="center"
+            tools:ignore="HardcodedText" />
+
+        <!-- instead of showing video, we will show backdrop for now -->
+        <ImageView
+            android:id="@+id/movie_detail_trailer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:layout_height="150dp"
+            tools:ignore="ContentDescription" />
+
+        <com.sunrisekcdevelopers.ui_components.components.st_media_core_details.StMediaCoreDetails
+            android:id="@+id/movie_detail_media_core_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:layout_height="150dp"/>
+
+        <com.sunrisekcdevelopers.ui_components.components.StBanner
+            android:id="@+id/movie_detail_banner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/movie_detail_tagline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            tools:visibility="visible"/>
+
+        <com.sunrisekcdevelopers.ui_components.components.StExpandableText
+            android:id="@+id/movie_detail_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <com.sunrisekcdevelopers.ui_components.components.StWrappedTagList
+            android:id="@+id/movie_detail_genres"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:stwlTitle="@string/heading_genres"/>
+
+        <com.sunrisekcdevelopers.ui_components.components.StWrappedTagList
+            android:id="@+id/movie_detail_languages"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:stwlTitle="@string/heading_languages"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/movie_detail_container_actions"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp">
+
+            <com.sunrisekcdevelopers.ui_components.components.st_actionable.StAddActionable
+                android:id="@+id/movie_detail_action_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="2dp"/>
+
+            <com.sunrisekcdevelopers.ui_components.components.st_actionable.StEyeActionable
+                android:id="@+id/movie_detail_action_rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="2dp"/>
+
+            <com.sunrisekcdevelopers.ui_components.components.st_actionable.StHeartActionable
+                android:id="@+id/movie_detail_action_watch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="2dp"/>
+
+            <com.sunrisekcdevelopers.ui_components.components.st_actionable.StShareActionable
+                android:id="@+id/movie_detail_action_share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/movie_detail_bottom_tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabMode="fixed"
+            app:tabIndicatorAnimationMode="linear"
+            app:tabIndicatorColor="#EF0C4C"
+            app:tabIndicatorFullWidth="true"
+            app:tabIndicatorHeight="2dp"
+            app:tabSelectedTextColor="#EF0C4C"/>
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/movie_detail_bottom_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.core.widget.NestedScrollView>

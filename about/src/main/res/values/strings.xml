@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tools_version">Version 2.14.69</string>
+    <string name="tools_build">Debug</string>
+    <string name="tools_heading">ShowTracker Features</string>
+    <string name="tools_content">Here we can add a summary of changelog \n or we can include a list of features \n also we can use this screen to give credit to the datasource TMDB</string>
+</resources>

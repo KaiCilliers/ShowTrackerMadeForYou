@@ -7,24 +7,26 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.sunrisekcdevelopers.ui_components.databinding.ViewholderPosterBinding
 
-class PosterAdapter : ListAdapter<Int, PosterAdapter.PosterViewHolder>(COMPARATOR) {
+class PosterAdapter : ListAdapter<Boolean, PosterAdapter.PosterViewHolder>(COMPARATOR) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PosterViewHolder {
         return PosterViewHolder.from(parent)
     }
 
     override fun onBindViewHolder(holder: PosterViewHolder, position: Int) {
-        holder.bind()
+        holder.bind(getItem(position))
     }
 
     class PosterViewHolder private constructor(
         val binding: ViewholderPosterBinding
     ) : RecyclerView.ViewHolder (binding.root) {
 
-        fun bind() {
-            binding.viewholderPoster.setImage(
-                "https://th.bing.com/th/id/R.80c1f98b09c9277a05b5b7ff55570b84?rik=7Eqx5Zb6y%2fjZAA&riu=http%3a%2f%2fwww.bedlamfarm.com%2fwp-content%2fuploads%2f2017%2f07%2fPortrait-Gus.-A-Small-Dog-Is-Different-Than-A-Big-Dog-944x766.jpg&ehk=cSTzIadB1b0riJrmBTYMenvHaf3Wu491bPqs%2fSIkt58%3d&risl=&pid=ImgRaw&r=0"
-            )
+        fun bind(data: Boolean) {
+            if (data) {
+                binding.viewholderPoster.setImage("https://image.tmdb.org/t/p/w500/gNbdjDi1HamTCrfvM9JeA94bNi2.jpg")
+            } else {
+                binding.viewholderPoster.setImage("https://image.tmdb.org/t/p/w500/tUkY0WxffPZ9PoyC62PIyyUMGnt.jpg")
+            }
         }
 
         companion object {
@@ -37,12 +39,12 @@ class PosterAdapter : ListAdapter<Int, PosterAdapter.PosterViewHolder>(COMPARATO
     }
 
     companion object {
-        private val COMPARATOR = object : DiffUtil.ItemCallback<Int>() {
-            override fun areItemsTheSame(oldItem: Int, newItem: Int): Boolean {
+        private val COMPARATOR = object : DiffUtil.ItemCallback<Boolean>() {
+            override fun areItemsTheSame(oldItem: Boolean, newItem: Boolean): Boolean {
                 return oldItem == newItem
             }
 
-            override fun areContentsTheSame(oldItem: Int, newItem: Int): Boolean {
+            override fun areContentsTheSame(oldItem: Boolean, newItem: Boolean): Boolean {
                 return oldItem == newItem
             }
         }

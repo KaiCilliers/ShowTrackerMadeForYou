@@ -33,7 +33,7 @@ class StCollapsableSection @JvmOverloads constructor(
         }
         binding.stCollapsableSectionList.adapter = adapter
         adapter.submitList(listOf(
-            1,2,3,4,5,6,7,8,9
+            true, true, true, true, true, true, true, true, false
         ))
         binding.stCollapsableSectionChevron.setOnClickListener {
             toggleListState()
