@@ -6,6 +6,7 @@ import android.view.View
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.google.android.material.tabs.TabLayoutMediator
 import com.sunrisekcdevelopers.common.R as commonR
 import com.sunrisekcdevelopers.imageloading.StandardGlideImage
@@ -31,8 +32,11 @@ class MovieDetailFragment : Fragment(R.layout.movie_detail_fragment) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.tvDiscoveryLabel.setOnClickListener {
+            (loadFragment(GlobalDestinations.Fragments.EpisodeDetail) as BottomSheetDialogFragment).show(childFragmentManager, "EpisodeDetail")
+        }
+        binding.movieDetailBanner.setOnClickListener {
             replaceFragmentExt(
-                newFragment = loadFragment(GlobalDestinations.Fragments.EpisodeDetail),
+                newFragment = loadFragment(GlobalDestinations.Fragments.About),
                 addToBackStack = true,
                 transactionAnimations = TransactionAnimations.RIGHT_TO_LEFT
             )
