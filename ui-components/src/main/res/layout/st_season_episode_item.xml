@@ -14,18 +14,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="1dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
         tools:src="@tools:sample/avatars"
         tools:ignore="ContentDescription" />
 
     <!-- obviously this needs to blur the image behind it and still it needs a outline -->
     <com.sunrisekcdevelopers.ui_components.components.StNumberToggle
         android:id="@+id/st_season_episode_item_number_toggle"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_width="0dp"
         app:layout_constraintTop_toTopOf="@id/st_season_episode_item_image"
         app:layout_constraintStart_toStartOf="@id/st_season_episode_item_image"
         app:layout_constraintEnd_toEndOf="@id/st_season_episode_item_image"
-        app:layout_constraintBottom_toBottomOf="@id/st_season_episode_item_image"/>
+        app:layout_constraintBottom_toBottomOf="@id/st_season_episode_item_image" />
 
     <!-- tood this needs to be another view with circle border and "i" inside. Should have a solid (black) background-->
     <com.google.android.material.imageview.ShapeableImageView

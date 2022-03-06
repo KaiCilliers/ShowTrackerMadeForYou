@@ -104,8 +104,8 @@ class StProgressBar @JvmOverloads constructor(
 
     private fun toggleLabelVisibility(hide: Boolean) {
         when (hide) {
-            true -> { binding.stProgressBarCheck.gone() }
-            false -> { binding.stProgressBarCheck.visible() }
+            true -> { binding.stProgressBarTextIndicator.gone() }
+            false -> { binding.stProgressBarTextIndicator.visible() }
         }
     }
 

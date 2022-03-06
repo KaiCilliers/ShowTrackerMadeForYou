@@ -115,6 +115,7 @@ dependencies {
     implementation(project(Modules.Features.episodeDetail))
     implementation(project(Modules.Features.tvShowDetail))
     implementation(project(Modules.Features.personDetail))
+    implementation(project(Modules.Features.seasonDetail))
 
     // Coroutines
     implementation (Libraries.coroutine)

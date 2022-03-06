@@ -14,5 +14,6 @@ object Modules {
         const val movieDetail = ":movieDetail"
         const val tvShowDetail = ":tvShowDetail"
         const val personDetail = ":personDetail"
+        const val seasonDetail = ":seasonDetail"
     }
 }

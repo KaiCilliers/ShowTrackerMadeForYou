@@ -27,7 +27,7 @@ object Versions {
     const val coroutineVersion = "1.5.2"
 
     // Glide
-    const val glideVersion = "4.8.0"
+    const val glideVersion = "4.13.1"
 
     // Viewpager2
     const val viewpager2Version = "1.0.0"

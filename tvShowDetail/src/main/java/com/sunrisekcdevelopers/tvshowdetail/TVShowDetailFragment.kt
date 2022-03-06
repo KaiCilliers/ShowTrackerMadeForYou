@@ -77,6 +77,13 @@ class TVShowDetailFragment : Fragment(R.layout.tvshow_detail_fragment) {
                         transactionAnimations = TransactionAnimations.RIGHT_TO_LEFT
                     )
                 }
+                tvshowDetailBanner.setOnClickListener {
+                    replaceFragmentExt(
+                        newFragment = loadFragment(GlobalDestinations.Fragments.SeasonDetail),
+                        addToBackStack = true,
+                        transactionAnimations = TransactionAnimations.RIGHT_TO_LEFT
+                    )
+                }
             }
         }
         val adapter = TVShowBottomViewPagerAdapter(this)
