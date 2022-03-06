@@ -41,6 +41,13 @@ class MovieDetailFragment : Fragment(R.layout.movie_detail_fragment) {
                 transactionAnimations = TransactionAnimations.RIGHT_TO_LEFT
             )
         }
+        binding.movieDetailTagline.setOnClickListener {
+            replaceFragmentExt(
+                newFragment = loadFragment(GlobalDestinations.Fragments.FreeSearch),
+                addToBackStack = true,
+                transactionAnimations = TransactionAnimations.RIGHT_TO_LEFT
+            )
+        }
         // todo determine which lifecycleowner to pass here
         viewModel.exampleState.observe(viewLifecycleOwner) {
             binding.apply {

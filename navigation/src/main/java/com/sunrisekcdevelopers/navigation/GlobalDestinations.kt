@@ -19,6 +19,7 @@ object GlobalDestinations {
         const val PersonDetail = "$ROOT_PACKAGE.persondetail.PersonDetailFragment"
         const val SeasonDetail = "$ROOT_PACKAGE.seasondetail.SeasonDetailFragment"
         const val About = "$ROOT_PACKAGE.about.AboutFragment"
+        const val FreeSearch = "$ROOT_PACKAGE.freesearch.FreeSearchFragment"
     }
     object KEYS {
         const val SECONDARY_INITIAL_DESTINATION = "secondary_destiantion"

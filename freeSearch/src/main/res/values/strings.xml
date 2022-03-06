@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="heading_movies">Movies</string>
+    <string name="heading_tvshows">TV Shows</string>
+    <string name="heading_people">People</string>
+</resources>
