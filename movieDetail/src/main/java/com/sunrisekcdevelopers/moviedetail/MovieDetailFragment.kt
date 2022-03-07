@@ -48,6 +48,20 @@ class MovieDetailFragment : Fragment(R.layout.movie_detail_fragment) {
                 transactionAnimations = TransactionAnimations.RIGHT_TO_LEFT
             )
         }
+        binding.movieDetailTrailer.setOnClickListener {
+            replaceFragmentExt(
+                newFragment = loadFragment(GlobalDestinations.Fragments.RefinesSearchSingle),
+                addToBackStack = true,
+                transactionAnimations = TransactionAnimations.RIGHT_TO_LEFT
+            )
+        }
+        binding.movieDetailGenres.setOnClickListener {
+            replaceFragmentExt(
+                newFragment = loadFragment(GlobalDestinations.Fragments.RefinesSearchMulti),
+                addToBackStack = true,
+                transactionAnimations = TransactionAnimations.RIGHT_TO_LEFT
+            )
+        }
         // todo determine which lifecycleowner to pass here
         viewModel.exampleState.observe(viewLifecycleOwner) {
             binding.apply {

@@ -118,6 +118,7 @@ dependencies {
     implementation(project(Modules.Features.seasonDetail))
     implementation(project(Modules.Features.about))
     implementation(project(Modules.Features.freeSearch))
+    implementation(project(Modules.Features.refinedSearch))
 
     // Coroutines
     implementation (Libraries.coroutine)

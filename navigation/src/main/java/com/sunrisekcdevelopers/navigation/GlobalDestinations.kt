@@ -20,6 +20,8 @@ object GlobalDestinations {
         const val SeasonDetail = "$ROOT_PACKAGE.seasondetail.SeasonDetailFragment"
         const val About = "$ROOT_PACKAGE.about.AboutFragment"
         const val FreeSearch = "$ROOT_PACKAGE.freesearch.FreeSearchFragment"
+        const val RefinesSearchSingle = "$ROOT_PACKAGE.refinedsearch.single.RefinedSearchSingleFragment"
+        const val RefinesSearchMulti = "$ROOT_PACKAGE.refinedsearch.multi.RefinedSearchMultiFragment"
     }
     object KEYS {
         const val SECONDARY_INITIAL_DESTINATION = "secondary_destiantion"
